@@ -11,6 +11,16 @@
 		11088AD22A186F8900F14628 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11088AD12A186F8900F14628 /* ContentView.swift */; };
 		11088AD42A186F8B00F14628 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11088AD32A186F8B00F14628 /* Assets.xcassets */; };
 		11088AD72A186F8B00F14628 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11088AD62A186F8B00F14628 /* Preview Assets.xcassets */; };
+		11088AFC2A1905DF00F14628 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 11088AFB2A1905DF00F14628 /* FirebaseAnalytics */; };
+		11088AFE2A1905DF00F14628 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 11088AFD2A1905DF00F14628 /* FirebaseMessaging */; };
+		115796F82A1B0CE80000243A /* QRCodeReader in Frameworks */ = {isa = PBXBuildFile; productRef = 115796F72A1B0CE80000243A /* QRCodeReader */; };
+		115796FA2A1B118C0000243A /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115796F92A1B118C0000243A /* State.swift */; };
+		115796FD2A1B11B50000243A /* SimpleKeychain in Frameworks */ = {isa = PBXBuildFile; productRef = 115796FC2A1B11B50000243A /* SimpleKeychain */; };
+		115796FF2A1B17F70000243A /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115796FE2A1B17F70000243A /* ScannerView.swift */; };
+		115797012A1BB8BA0000243A /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115797002A1BB8BA0000243A /* NotificationView.swift */; };
+		115797042A1BB9170000243A /* JWTDecode in Frameworks */ = {isa = PBXBuildFile; productRef = 115797032A1BB9170000243A /* JWTDecode */; };
+		115797062A1BCE770000243A /* EnrollmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115797052A1BCE770000243A /* EnrollmentView.swift */; };
+		19BCCD36D9DA3FF5CFE03DA2 /* Pods_GuardianAppSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D65202F14266663019885C /* Pods_GuardianAppSwiftUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +29,15 @@
 		11088AD12A186F8900F14628 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		11088AD32A186F8B00F14628 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11088AD62A186F8B00F14628 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		11088AF92A18FA9300F14628 /* GuardianAppSwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GuardianAppSwiftUI.entitlements; sourceTree = "<group>"; };
+		11088AFF2A1905F500F14628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		115796F92A1B118C0000243A /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		115796FE2A1B17F70000243A /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		115797002A1BB8BA0000243A /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		115797052A1BCE770000243A /* EnrollmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentView.swift; sourceTree = "<group>"; };
+		C9342A2B32CF7D351B1DCA7C /* Pods-GuardianAppSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuardianAppSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-GuardianAppSwiftUI/Pods-GuardianAppSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
+		E8A744949FE3220F8E4911D7 /* Pods-GuardianAppSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuardianAppSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-GuardianAppSwiftUI/Pods-GuardianAppSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
+		F9D65202F14266663019885C /* Pods_GuardianAppSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuardianAppSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +45,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11088AFE2A1905DF00F14628 /* FirebaseMessaging in Frameworks */,
+				115796F82A1B0CE80000243A /* QRCodeReader in Frameworks */,
+				115797042A1BB9170000243A /* JWTDecode in Frameworks */,
+				11088AFC2A1905DF00F14628 /* FirebaseAnalytics in Frameworks */,
+				19BCCD36D9DA3FF5CFE03DA2 /* Pods_GuardianAppSwiftUI.framework in Frameworks */,
+				115796FD2A1B11B50000243A /* SimpleKeychain in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,6 +62,8 @@
 			children = (
 				11088ACE2A186F8900F14628 /* GuardianAppSwiftUI */,
 				11088ACD2A186F8900F14628 /* Products */,
+				11088AE22A18719900F14628 /* Frameworks */,
+				CB194C8D22E15C1C51430908 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,10 +78,16 @@
 		11088ACE2A186F8900F14628 /* GuardianAppSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				11088AFF2A1905F500F14628 /* Info.plist */,
+				11088AF92A18FA9300F14628 /* GuardianAppSwiftUI.entitlements */,
 				11088ACF2A186F8900F14628 /* GuardianAppSwiftUIApp.swift */,
 				11088AD12A186F8900F14628 /* ContentView.swift */,
 				11088AD32A186F8B00F14628 /* Assets.xcassets */,
 				11088AD52A186F8B00F14628 /* Preview Content */,
+				115796F92A1B118C0000243A /* State.swift */,
+				115796FE2A1B17F70000243A /* ScannerView.swift */,
+				115797002A1BB8BA0000243A /* NotificationView.swift */,
+				115797052A1BCE770000243A /* EnrollmentView.swift */,
 			);
 			path = GuardianAppSwiftUI;
 			sourceTree = "<group>";
@@ -67,6 +100,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		11088AE22A18719900F14628 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9D65202F14266663019885C /* Pods_GuardianAppSwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB194C8D22E15C1C51430908 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C9342A2B32CF7D351B1DCA7C /* Pods-GuardianAppSwiftUI.debug.xcconfig */,
+				E8A744949FE3220F8E4911D7 /* Pods-GuardianAppSwiftUI.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,15 +124,24 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11088ADA2A186F8B00F14628 /* Build configuration list for PBXNativeTarget "GuardianAppSwiftUI" */;
 			buildPhases = (
+				A71C24C7CAD24795A7ADA008 /* [CP] Check Pods Manifest.lock */,
 				11088AC82A186F8900F14628 /* Sources */,
 				11088AC92A186F8900F14628 /* Frameworks */,
 				11088ACA2A186F8900F14628 /* Resources */,
+				06CCAF2F08EDDA27E77C80C8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = GuardianAppSwiftUI;
+			packageProductDependencies = (
+				11088AFB2A1905DF00F14628 /* FirebaseAnalytics */,
+				11088AFD2A1905DF00F14628 /* FirebaseMessaging */,
+				115796F72A1B0CE80000243A /* QRCodeReader */,
+				115796FC2A1B11B50000243A /* SimpleKeychain */,
+				115797032A1BB9170000243A /* JWTDecode */,
+			);
 			productName = GuardianAppSwiftUI;
 			productReference = 11088ACC2A186F8900F14628 /* GuardianAppSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +170,12 @@
 				Base,
 			);
 			mainGroup = 11088AC32A186F8900F14628;
+			packageReferences = (
+				11088AFA2A1905DF00F14628 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				115796F62A1B0CE80000243A /* XCRemoteSwiftPackageReference "QRCodeReader.swift" */,
+				115796FB2A1B11B50000243A /* XCRemoteSwiftPackageReference "SimpleKeychain" */,
+				115797022A1BB9170000243A /* XCRemoteSwiftPackageReference "JWTDecode" */,
+			);
 			productRefGroup = 11088ACD2A186F8900F14628 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -132,13 +197,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		06CCAF2F08EDDA27E77C80C8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GuardianAppSwiftUI/Pods-GuardianAppSwiftUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GuardianAppSwiftUI/Pods-GuardianAppSwiftUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GuardianAppSwiftUI/Pods-GuardianAppSwiftUI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A71C24C7CAD24795A7ADA008 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GuardianAppSwiftUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		11088AC82A186F8900F14628 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				11088AD22A186F8900F14628 /* ContentView.swift in Sources */,
+				115796FF2A1B17F70000243A /* ScannerView.swift in Sources */,
 				11088AD02A186F8900F14628 /* GuardianAppSwiftUIApp.swift in Sources */,
+				115796FA2A1B118C0000243A /* State.swift in Sources */,
+				115797062A1BCE770000243A /* EnrollmentView.swift in Sources */,
+				115797012A1BB8BA0000243A /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +292,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -241,6 +353,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -261,15 +374,19 @@
 		};
 		11088ADB2A186F8B00F14628 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9342A2B32CF7D351B1DCA7C /* Pods-GuardianAppSwiftUI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GuardianAppSwiftUI/GuardianAppSwiftUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GuardianAppSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = R82LKF5W93;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GuardianAppSwiftUI/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Used to scan QR Codes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -280,7 +397,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pushp.GuardianAppSwiftUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pushp.GuardianApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -290,15 +407,19 @@
 		};
 		11088ADC2A186F8B00F14628 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8A744949FE3220F8E4911D7 /* Pods-GuardianAppSwiftUI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = GuardianAppSwiftUI/GuardianAppSwiftUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GuardianAppSwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = R82LKF5W93;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GuardianAppSwiftUI/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Used to scan QR Codes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -309,7 +430,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pushp.GuardianAppSwiftUI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pushp.GuardianApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -339,6 +460,69 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		11088AFA2A1905DF00F14628 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+		115796F62A1B0CE80000243A /* XCRemoteSwiftPackageReference "QRCodeReader.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yannickl/QRCodeReader.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+		115796FB2A1B11B50000243A /* XCRemoteSwiftPackageReference "SimpleKeychain" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auth0/SimpleKeychain.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		115797022A1BB9170000243A /* XCRemoteSwiftPackageReference "JWTDecode" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auth0/JWTDecode.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		11088AFB2A1905DF00F14628 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11088AFA2A1905DF00F14628 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		11088AFD2A1905DF00F14628 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11088AFA2A1905DF00F14628 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		115796F72A1B0CE80000243A /* QRCodeReader */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 115796F62A1B0CE80000243A /* XCRemoteSwiftPackageReference "QRCodeReader.swift" */;
+			productName = QRCodeReader;
+		};
+		115796FC2A1B11B50000243A /* SimpleKeychain */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 115796FB2A1B11B50000243A /* XCRemoteSwiftPackageReference "SimpleKeychain" */;
+			productName = SimpleKeychain;
+		};
+		115797032A1BB9170000243A /* JWTDecode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 115797022A1BB9170000243A /* XCRemoteSwiftPackageReference "JWTDecode" */;
+			productName = JWTDecode;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 11088AC42A186F8900F14628 /* Project object */;
 }
