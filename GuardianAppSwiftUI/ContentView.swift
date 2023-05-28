@@ -56,13 +56,7 @@ struct ContentView: View {
     }
     
     func processEnrollment(with string: String) {
-        
-        readerStuff(barcode: string)
-
-        }
-    
-    func readerStuff(barcode: String) {
-        let barCodeUri = barcode
+        let barCodeUri = string
             
         guard let signingKey = try? KeychainRSAPrivateKey.new(with: ContentView.RSA_KEY_PRIVATE_TAG),
                     let verificationKey = try? signingKey.verificationKey() else { return }
@@ -93,44 +87,7 @@ struct ContentView: View {
     
 }
 
-struct PageView: View {
-     @State private var selection  = 0
-    @State private var localSelectionState = 0
-    @State private var showAlert: Bool = false
-    var body: some View {
-        
-                     
-        TabView(selection: $selection) {
-            ForEach(0..<30) { i in
-                ZStack {
-                    Color.secondary
-                    Text("Row: \(i)").foregroundColor(Color(UIColor.systemBackground))
-                }.clipShape(RoundedRectangle(cornerRadius: 10.0, style: .continuous))
-                //.scaleEffect((selection == i) ? 1.0 :  0.8)
-            }
-            .padding(.all, 10)
-        }.onChange(of: selection, perform: { value in
-            withAnimation {
-                localSelectionState  = value
-            }
-        })
-        .frame(width: UIScreen.main.bounds.width - 200, height: 200)
-        .tabViewStyle(PageTabViewStyle())
-        
-        
-    }
-}
 
-
-struct PageView_Previews: PreviewProvider {
-  static var previews: some View {
-    ScrollView {
-        LazyHStack {
-            PageView()
-        }
-    }
-  }
-}
 
 class OTPCredential {
 
