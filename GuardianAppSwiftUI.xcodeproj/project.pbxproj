@@ -20,6 +20,7 @@
 		115797012A1BB8BA0000243A /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115797002A1BB8BA0000243A /* NotificationView.swift */; };
 		115797042A1BB9170000243A /* JWTDecode in Frameworks */ = {isa = PBXBuildFile; productRef = 115797032A1BB9170000243A /* JWTDecode */; };
 		115797062A1BCE770000243A /* EnrollmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115797052A1BCE770000243A /* EnrollmentView.swift */; };
+		11D8F2DB2A243E8B0092A4A4 /* EnrollmentsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D8F2DA2A243E8B0092A4A4 /* EnrollmentsListView.swift */; };
 		19BCCD36D9DA3FF5CFE03DA2 /* Pods_GuardianAppSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D65202F14266663019885C /* Pods_GuardianAppSwiftUI.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		115796FE2A1B17F70000243A /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		115797002A1BB8BA0000243A /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		115797052A1BCE770000243A /* EnrollmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentView.swift; sourceTree = "<group>"; };
+		11D8F2DA2A243E8B0092A4A4 /* EnrollmentsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentsListView.swift; sourceTree = "<group>"; };
 		C9342A2B32CF7D351B1DCA7C /* Pods-GuardianAppSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuardianAppSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-GuardianAppSwiftUI/Pods-GuardianAppSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		E8A744949FE3220F8E4911D7 /* Pods-GuardianAppSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuardianAppSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-GuardianAppSwiftUI/Pods-GuardianAppSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		F9D65202F14266663019885C /* Pods_GuardianAppSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GuardianAppSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +90,7 @@
 				115796FE2A1B17F70000243A /* ScannerView.swift */,
 				115797002A1BB8BA0000243A /* NotificationView.swift */,
 				115797052A1BCE770000243A /* EnrollmentView.swift */,
+				11D8F2DA2A243E8B0092A4A4 /* EnrollmentsListView.swift */,
 			);
 			path = GuardianAppSwiftUI;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				115796FA2A1B118C0000243A /* State.swift in Sources */,
 				115797062A1BCE770000243A /* EnrollmentView.swift in Sources */,
 				115797012A1BB8BA0000243A /* NotificationView.swift in Sources */,
+				11D8F2DB2A243E8B0092A4A4 /* EnrollmentsListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,57 +16,68 @@ struct EnrollmentView: View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.05), Color.blue.opacity(0.15)]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
-            
+
             VStack(spacing: 20) {
                 VStack(alignment: .leading, spacing: 10) {
-                    Text("Enrollment ID: \(enrollmentId)")
+                    Text("Enrollment ID")
                         .font(.headline)
                         .padding(.horizontal)
-                    
-                    Text("OTP Secret: \(otpSecret)")
+                    Text(enrollmentId)
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                        .padding(.horizontal)
+
+                    Text("OTP Secret")
                         .font(.headline)
                         .padding(.horizontal)
-                    
-                    Text("Local Identifier: \(localIdentifier)")
+                    Text(otpSecret)
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                        .padding(.horizontal)
+
+                    Text("Local Identifier")
                         .font(.headline)
                         .padding(.horizontal)
-                    
-                    
+                    Text(localIdentifier)
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                        .padding(.horizontal)
+
                     HStack {
-                        Text("TOTP: \(totp)")
+                        Text("TOTP")
                             .font(.headline)
                             .foregroundColor(.black)
                             .padding(.horizontal)
+                        Text(totp)
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                            .padding(.horizontal)
                         Spacer()
-                        CircularProgress(progress: timerProgress, countdown: $countdown).frame(width: 40, height: 40).padding(.horizontal)
-
+                        CircularProgress(progress: timerProgress, countdown: $countdown)
+                            .frame(width: 40, height: 40)
+                            .padding(.horizontal)
                     }
-                    
                 }
-                .padding(.vertical, 20)
-                .background(Color.white.opacity(0.8))
+                .padding()
+                .background(Color.white)
                 .cornerRadius(15)
                 .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
                 .shadow(color: Color.white.opacity(0.7), radius: 10, x: 0, y: -5)
-                
-                Spacer()
-                
-                VStack(alignment: .leading, spacing: 10) {
 
-                    
-                    Button(action: {
-                        self.unenroll()
-                    }) {
-                        Text("Unenroll")
-                            .font(.headline)
-                            .padding()
-                            .frame(minWidth: 0, maxWidth: .infinity)
-                            .background(Color.red)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                    }
-                    .padding(.horizontal)
+                Spacer()
+
+                Button(action: {
+                    self.unenroll()
+                }) {
+                    Text("Unenroll")
+                        .font(.headline)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.red)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
                 }
+                .padding(.horizontal)
             }
             .padding()
             .onAppear(perform: loadData)
@@ -74,7 +85,7 @@ struct EnrollmentView: View {
                 self.timerProgress -= 0.03333
                 self.countdown -= 1
                 if self.timerProgress <= 0 {
-                    self.totp = self.generateTOTP() // Call your TOTP generation method
+                    self.totp = self.generateTOTP(enrolled: enrolled) // Call your TOTP generation method
                     self.timerProgress = 1.0
                     self.countdown = 30
                 }
@@ -85,14 +96,13 @@ struct EnrollmentView: View {
     func loadData() {
         // Fetch your data here
         // This is just placeholder data
-        if let enrollment = AppDelegate.state {
-            self.enrollmentId = enrollment.identifier
-            self.otpSecret = enrollment.otp!.base32Secret
-            self.totp = generateTOTP()
-            self.localIdentifier = enrollment.localIdentifier
+            self.enrollmentId = enrolled!.identifier
+            self.otpSecret = enrolled!.otp!.base32Secret
+            self.totp = generateTOTP(enrolled: enrolled)
+            self.localIdentifier = enrolled!.localIdentifier
             
             
-        }
+        
 
     }
 
@@ -124,8 +134,8 @@ struct EnrollmentView: View {
         }
     }
     
-    func generateTOTP() -> String {
-        if let enrollment = AppDelegate.state {
+    func generateTOTP(enrolled: GuardianState?) -> String {
+        if let enrollment = enrolled {
             let credential = OTPCredential()
             credential.algorithmName = ((enrollment.otp?.algorithm.rawValue)!)
             credential.base32Secret = enrollment.otp!.base32Secret
@@ -173,6 +183,14 @@ struct CircularProgress: View {
                 .fontWeight(.bold)
                 .foregroundColor(Color.black)
         }
+    }
+}
+
+
+struct EnrollmentView_Previews: PreviewProvider {
+    @State static var enrolled: GuardianState? = GuardianState.init(identifier: "dev_asdad", localIdentifier: UIDevice.current.identifierForVendor!.uuidString, token: "1231231231231231231323", keyTag: "1222", otp: OTPParameters(base32Secret: "3SLSWZPQQBB7WBRYDAQZ5J77W5D7I6GU") )
+    static var previews: some View {
+        EnrollmentView(enrolled: $enrolled)
     }
 }
 

@@ -76,6 +76,10 @@ extension AppDelegate {
             }
         }
     }
+    
+    static func getByEnrollmentId(enrollmentId: String) -> GuardianState? {
+        return GuardianState.loadByEnrollmentId(by: enrollmentId)
+    }
 }
 
 
@@ -141,8 +145,6 @@ public class NotificationCenter: NSObject, UNUserNotificationCenterDelegate, Obs
                 }
                 
                 DispatchQueue.main.async { UIApplication.shared.registerForRemoteNotifications() }
-                
-                
             }
         }
         

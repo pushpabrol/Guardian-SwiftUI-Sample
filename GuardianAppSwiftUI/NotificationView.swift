@@ -10,6 +10,7 @@ struct NotificationView: View {
     @State var dateLabel: String = ""
     @State var merchantName: String = ""
     @State var paymentAmount: String = ""
+    @State var username: String = ""
     @State var account: String = ""
     @State private var buttonScale: CGFloat = 1.0
     var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -23,26 +24,47 @@ struct NotificationView: View {
             LinearGradient(gradient: Gradient(colors: [Color.white, Color(UIColor.systemGray4)]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
 
+            
             VStack(spacing: 20) {
+                Text("Authentication Request").font(.headline)
+                Spacer()
                 VStack(alignment: .leading, spacing: 10) {
-                    Text(browserLabel)
+                    
+                        Text("Browser")
+                            .font(.headline)
+                            .padding(.horizontal)
+                        Text(browserLabel)
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                            .padding(.horizontal)
+                    
+                    
+                    Text("Location")
                         .font(.headline)
                         .padding(.horizontal)
-
-                    Text(location?.name! ?? "UnKnown")
+                    Text(location?.name ?? "Unknown")
                         .font(.subheadline)
+                        .foregroundColor(.secondary)
                         .padding(.horizontal)
-
-                    Text(dateLabel)
-                        .font(.caption)
-                        .padding(.horizontal)
-
-                    Text("\(merchantName) is requesting a payment of \(paymentAmount) from your account: \(account)")
+                    
+                    Text("Requested At")
                         .font(.headline)
+                        .padding(.horizontal)
+                    Text(dateLabel)
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                        .padding(.horizontal)
+
+                    Text("Requested")
+                        .font(.headline)
+                        .padding(.horizontal)
+                    Text("\(merchantName) is requesting a payment of \(paymentAmount) from your account: \(account)")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
                         .padding(.horizontal)
 
                 }
-                .padding(.vertical, 20)
+                .padding()
                 .background(Color.white.opacity(0.8))
                 .cornerRadius(15)
                 .shadow(radius: 10)
@@ -54,7 +76,7 @@ struct NotificationView: View {
                         self.allowAction()
                         self.showAllowAlert = true
                         self.timerAllow?.invalidate()
-                        self.timerAllow = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { _ in
+                        self.timerAllow = Timer.scheduledTimer(withTimeInterval: 4.0, repeats: false) { _ in
                             self.showAllowAlert = false
                             notificationCenter.authenticationNotification = nil
                         }
@@ -66,6 +88,7 @@ struct NotificationView: View {
                             .background(Color.green)
                             .foregroundColor(.white)
                             .cornerRadius(10)
+                            .scaleEffect(buttonScale)
                     }
 
                     Button(action: {
@@ -78,6 +101,7 @@ struct NotificationView: View {
                             .background(Color.red)
                             .foregroundColor(.white)
                             .cornerRadius(10)
+                            .scaleEffect(buttonScale)
                     }
                 }
                 .padding(.horizontal)
@@ -88,7 +112,7 @@ struct NotificationView: View {
             }
 
             if showAllowAlert {
-                Text("Access Granted")
+                Text("Access Granted. Continue at \(self.merchantName) to complete your transaction!")
                     .font(.title)
                     .padding()
                     .background(Color.black.opacity(0.7))
@@ -96,7 +120,6 @@ struct NotificationView: View {
                     .cornerRadius(10)
                     .transition(AnyTransition.opacity.animation(.easeInOut(duration: 2.0)))
             }
-
         }
         .onReceive(timer) { _ in
             self.buttonScale = self.buttonScale == 1.0 ? 1.1 : 1.0
@@ -110,10 +133,10 @@ struct NotificationView: View {
         }
         browserLabel = notification.source?.browser?.name ?? "Unknown"
         location = notification.location!
-        dateLabel = "\(notification.startedAt)"
+        dateLabel = "\(notification.startedAt.formatted(date: .abbreviated, time: Date.FormatStyle.TimeStyle.standard))"
         let jwt = try! decode(jwt: notification.transactionToken)
         
-        let userId = jwt["sub"].string!.split(separator: "|")[1]
+        self.username = String(jwt["sub"].string!.split(separator: "|")[1])
         
         if( notification.txlnkid != nil) {
             if let url = URL(string: "https://messagestore.desmaximus.com/api/message/".appending(notification.txlnkid!)) {
