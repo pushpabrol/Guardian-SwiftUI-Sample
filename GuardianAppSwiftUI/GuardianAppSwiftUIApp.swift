@@ -97,8 +97,15 @@ struct GuardianAppSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             
-            ContentView().environmentObject(notificationCenter)
+            ContentView().environmentObject(notificationCenter).background(  LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.05), Color.blue.opacity(0.10)]), startPoint: .top, endPoint: .bottom)
+                .edgesIgnoringSafeArea(.all))
         }
+    }
+}
+
+struct GuardianAppSwiftUIApp_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView().environmentObject(NotificationCenter())
     }
 }
 

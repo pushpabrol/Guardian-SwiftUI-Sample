@@ -26,25 +26,28 @@ struct EnrollmentListView: View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.05), Color.blue.opacity(0.15)]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
+            
             NavigationView {
                 List(enrollments, id: \.identifier) { enrollment in
-                    NavigationLink(destination: EnrollmentView(enrolled: enrollment).border(.white)
+                    NavigationLink(destination: EnrollmentView(enrolled: enrollment)
                         .padding(.vertical,-20)
                         .padding(.bottom,20)){
-                        EnrollmentRowView(enrollment: enrollment).environmentObject(refreshManager)}
+                            EnrollmentRowView(enrollment: enrollment).environmentObject(refreshManager)}
                 }
-                .onAppear(perform: loadData)
-                .navigationBarTitle("Enrollments", displayMode: .inline)
-                .navigationBarHidden(true)
-                .navigationBarTitleDisplayMode(.large)
-                .onReceive(refreshManager.$shouldRefresh) { shouldRefresh in
-                    if shouldRefresh {
-                        loadData()
-                        refreshManager.shouldRefresh = false // Reset the refresh state
+                
+                    .navigationBarTitle("Enrollments", displayMode: .inline)
+                    .navigationBarHidden(true)
+                    .navigationBarTitleDisplayMode(.large)
+                    .onReceive(refreshManager.$shouldRefresh) { shouldRefresh in
+                        if shouldRefresh {
+                            loadData()
+                            refreshManager.shouldRefresh = false // Reset the refresh state
+                        }
                     }
-                }
-            }
+            }.onAppear(perform: loadData)
         }
+            
+        
     }
 
     struct EnrollmentRowView: View {
@@ -156,7 +159,6 @@ struct EnrollmentListView: View {
                 
                 Text("\(countdown)")
                     .font(.caption2)
-                    .foregroundColor(.black)
             }
         }
     }

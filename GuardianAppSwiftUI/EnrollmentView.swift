@@ -8,10 +8,6 @@ struct EnrollmentView: View {
     
     
     var body: some View {
-        ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.05), Color.blue.opacity(0.15)]), startPoint: .top, endPoint: .bottom)
-                .edgesIgnoringSafeArea(.all)
-
             VStack(spacing: 20) {
                 VStack(alignment: .leading, spacing: 20) {
                     Text("Domain")
@@ -68,7 +64,6 @@ struct EnrollmentView: View {
 
                 }
                 .padding()
-                .background(Color.white)
                 .cornerRadius(15)
                 .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
                 .shadow(color: Color.white.opacity(0.7), radius: 10, x: 0, y: -5)
@@ -80,7 +75,7 @@ struct EnrollmentView: View {
                 
             }
 
-        }
+        
     }
 
 

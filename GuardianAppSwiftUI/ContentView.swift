@@ -26,7 +26,7 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.05), Color.blue.opacity(0.15)]), startPoint: .top, endPoint: .bottom)
+            LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.05), Color.blue.opacity(0.10)]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
             if notificationCenter.authenticationNotification != nil {
                 NotificationView().environmentObject(notificationCenter)
@@ -45,8 +45,6 @@ struct ContentView: View {
                         }
                         .padding()
                         .foregroundColor(.blue)
-                        .background(.clear)
-                        .cornerRadius(10)
                     }
                     .sheet(isPresented: $isPresentingScanner) {
                         ScannerView() { result in
