@@ -6,7 +6,7 @@ import Guardian
 import QRCodeReader
 
 class AppDelegate: NSObject, UIApplicationDelegate {
-    static let guardianDomain = "sca-poc-cancun.guardian.us.auth0.com"
+    //static let guardianDomain = "sca-poc-cancun.guardian.us.auth0.com"
     static var pushToken: String? = nil
     var notificationManager: NotificationCenter?
 
@@ -79,6 +79,10 @@ extension AppDelegate {
     
     static func getByEnrollmentId(enrollmentId: String) -> GuardianState? {
         return GuardianState.loadByEnrollmentId(by: enrollmentId)
+    }
+    
+    static func saveEnrollmentById(enrollment: GuardianState) -> Void {
+        try! enrollment.saveByEnrollmentId()
     }
 }
 
@@ -153,7 +157,6 @@ public class NotificationCenter: NSObject, UNUserNotificationCenterDelegate, Obs
     public func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         
         let content = notification.request.content
-    
         let identifier = notification.request.identifier
         let userInfo = notification.request.content.userInfo
         print(userInfo)
@@ -174,14 +177,14 @@ public class NotificationCenter: NSObject, UNUserNotificationCenterDelegate, Obs
         print("identifier: \(identifier), userInfo: \(userInfo)")
 
         if let notification = Guardian.notification(from: userInfo),
-            let enrollment = AppDelegate.state
+           let enrollment = AppDelegate.getByEnrollmentId(enrollmentId: notification.enrollmentId)
         {
             if UNNotificationDefaultActionIdentifier == identifier { // App opened from notification
                 show(notification: notification)
                 completionHandler()
             } else { // Guardian allow/reject action
                 Guardian
-                    .authentication(forDomain: AppDelegate.guardianDomain, device: enrollment)
+                    .authentication(forDomain: enrollment.enrollmentTenantDomain, device: enrollment)
                     .handleAction(withIdentifier: identifier, notification: notification)
                     .start {
                         _ in completionHandler()

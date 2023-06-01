@@ -21,7 +21,7 @@ struct NotificationView: View {
 
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color.white, Color(UIColor.systemGray4)]), startPoint: .top, endPoint: .bottom)
+            LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.05), Color.blue.opacity(0.15)]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
 
             
@@ -62,6 +62,43 @@ struct NotificationView: View {
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                         .padding(.horizontal)
+                    
+                    Spacer()
+
+                    HStack(spacing: 50) {
+                        Button(action: {
+                            self.allowAction(enrollment: GuardianState.loadByEnrollmentId(by: notificationCenter.authenticationNotification!.enrollmentId))
+                            self.showAllowAlert = true
+                            self.timerAllow?.invalidate()
+                            self.timerAllow = Timer.scheduledTimer(withTimeInterval: 4.0, repeats: false) { _ in
+                                self.showAllowAlert = false
+                                notificationCenter.authenticationNotification = nil
+                            }
+                        }) {
+                            Text("Allow")
+                                .font(.headline)
+                                .padding()
+                                .frame(width: 130, height: 50)
+                                .background(Color.green)
+                                .foregroundColor(.white)
+                                .cornerRadius(10)
+                                .scaleEffect(buttonScale)
+                        }
+
+                        Button(action: {
+                            self.denyAction(enrollment: GuardianState.loadByEnrollmentId(by: notificationCenter.authenticationNotification!.enrollmentId))
+                        }) {
+                            Text("Deny")
+                                .font(.headline)
+                                .padding()
+                                .frame(width: 130, height: 50)
+                                .background(Color.red)
+                                .foregroundColor(.white)
+                                .cornerRadius(10)
+                                .scaleEffect(buttonScale)
+                        }
+                    }
+                    .padding(.horizontal)
 
                 }
                 .padding()
@@ -69,46 +106,11 @@ struct NotificationView: View {
                 .cornerRadius(15)
                 .shadow(radius: 10)
 
-                Spacer()
 
-                HStack(spacing: 50) {
-                    Button(action: {
-                        self.allowAction()
-                        self.showAllowAlert = true
-                        self.timerAllow?.invalidate()
-                        self.timerAllow = Timer.scheduledTimer(withTimeInterval: 4.0, repeats: false) { _ in
-                            self.showAllowAlert = false
-                            notificationCenter.authenticationNotification = nil
-                        }
-                    }) {
-                        Text("Allow")
-                            .font(.headline)
-                            .padding()
-                            .frame(width: 130, height: 50)
-                            .background(Color.green)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                            .scaleEffect(buttonScale)
-                    }
-
-                    Button(action: {
-                        self.denyAction()
-                    }) {
-                        Text("Deny")
-                            .font(.headline)
-                            .padding()
-                            .frame(width: 130, height: 50)
-                            .background(Color.red)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                            .scaleEffect(buttonScale)
-                    }
-                }
-                .padding(.horizontal)
             }
             .padding()
             .onAppear {
-                self.loadData()
+                self.loadData(enrollment: GuardianState.loadByEnrollmentId(by: notificationCenter.authenticationNotification!.enrollmentId))
             }
 
             if showAllowAlert {
@@ -127,8 +129,8 @@ struct NotificationView: View {
     }
 
 
-    func loadData() {
-        guard let notification = notificationCenter.authenticationNotification, let _ = AppDelegate.state else {
+    func loadData(enrollment: GuardianState?) {
+        guard let notification = notificationCenter.authenticationNotification, let _ = enrollment else {
             return
         }
         browserLabel = notification.source?.browser?.name ?? "Unknown"
@@ -162,13 +164,13 @@ struct NotificationView: View {
         }
     }
 
-    func allowAction() {
-        guard let notification = notificationCenter.authenticationNotification, let enrollment = AppDelegate.state else {
+    func allowAction(enrollment: GuardianState?) {
+        guard let notification = notificationCenter.authenticationNotification, let enrollment = enrollment else {
             notificationCenter.authenticationNotification = nil
             return
         }
         let request = Guardian
-            .authentication(forDomain: AppDelegate.guardianDomain, device: enrollment)
+            .authentication(forDomain: enrollment.enrollmentTenantDomain, device: enrollment)
             .allow(notification: notification)
         debugPrint(request)
         request.start { result in
@@ -183,13 +185,13 @@ struct NotificationView: View {
         }
     }
 
-    func denyAction() {
-        guard let notification = notificationCenter.authenticationNotification, let enrollment = AppDelegate.state else {
+    func denyAction(enrollment: GuardianState?) {
+        guard let notification = notificationCenter.authenticationNotification, let enrollment = enrollment else {
             notificationCenter.authenticationNotification = nil
             return
         }
         let request = Guardian
-            .authentication(forDomain: AppDelegate.guardianDomain, device: enrollment)
+            .authentication(forDomain: enrollment.enrollmentTenantDomain, device: enrollment)
             .reject(notification: notification)
         debugPrint(request)
         request.start { result in

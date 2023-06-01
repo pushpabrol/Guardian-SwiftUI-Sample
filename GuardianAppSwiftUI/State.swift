@@ -31,6 +31,8 @@ struct GuardianState: Codable {
     let token: String
     let keyTag: String
     let otp: OTPParameters?
+    let userEmail: String
+    let enrollmentTenantDomain: String
 
     func save() throws {
         let encoder = JSONEncoder()
@@ -62,6 +64,7 @@ struct GuardianState: Codable {
         guard let data = try? keychain.data(forKey: identifier) else { return nil }
         guard let state = try? decoder.decode(GuardianState.self, from: data) else { return nil }
         guard state.localIdentifier == identifier else { return nil }
+        
         return state
     }
     

@@ -11,8 +11,6 @@
 		11088AD22A186F8900F14628 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11088AD12A186F8900F14628 /* ContentView.swift */; };
 		11088AD42A186F8B00F14628 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11088AD32A186F8B00F14628 /* Assets.xcassets */; };
 		11088AD72A186F8B00F14628 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11088AD62A186F8B00F14628 /* Preview Assets.xcassets */; };
-		11088AFC2A1905DF00F14628 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 11088AFB2A1905DF00F14628 /* FirebaseAnalytics */; };
-		11088AFE2A1905DF00F14628 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 11088AFD2A1905DF00F14628 /* FirebaseMessaging */; };
 		115796F82A1B0CE80000243A /* QRCodeReader in Frameworks */ = {isa = PBXBuildFile; productRef = 115796F72A1B0CE80000243A /* QRCodeReader */; };
 		115796FA2A1B118C0000243A /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115796F92A1B118C0000243A /* State.swift */; };
 		115796FD2A1B11B50000243A /* SimpleKeychain in Frameworks */ = {isa = PBXBuildFile; productRef = 115796FC2A1B11B50000243A /* SimpleKeychain */; };
@@ -47,10 +45,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11088AFE2A1905DF00F14628 /* FirebaseMessaging in Frameworks */,
 				115796F82A1B0CE80000243A /* QRCodeReader in Frameworks */,
 				115797042A1BB9170000243A /* JWTDecode in Frameworks */,
-				11088AFC2A1905DF00F14628 /* FirebaseAnalytics in Frameworks */,
 				19BCCD36D9DA3FF5CFE03DA2 /* Pods_GuardianAppSwiftUI.framework in Frameworks */,
 				115796FD2A1B11B50000243A /* SimpleKeychain in Frameworks */,
 			);
@@ -139,8 +135,6 @@
 			);
 			name = GuardianAppSwiftUI;
 			packageProductDependencies = (
-				11088AFB2A1905DF00F14628 /* FirebaseAnalytics */,
-				11088AFD2A1905DF00F14628 /* FirebaseMessaging */,
 				115796F72A1B0CE80000243A /* QRCodeReader */,
 				115796FC2A1B11B50000243A /* SimpleKeychain */,
 				115797032A1BB9170000243A /* JWTDecode */,
@@ -174,7 +168,6 @@
 			);
 			mainGroup = 11088AC32A186F8900F14628;
 			packageReferences = (
-				11088AFA2A1905DF00F14628 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				115796F62A1B0CE80000243A /* XCRemoteSwiftPackageReference "QRCodeReader.swift" */,
 				115796FB2A1B11B50000243A /* XCRemoteSwiftPackageReference "SimpleKeychain" */,
 				115797022A1BB9170000243A /* XCRemoteSwiftPackageReference "JWTDecode" */,
@@ -311,7 +304,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -366,7 +359,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -382,6 +375,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = GuardianAppSwiftUI/GuardianAppSwiftUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -390,12 +384,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GuardianAppSwiftUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Guardian Push Auth";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Used to scan QR Codes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -415,6 +411,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = GuardianAppSwiftUI/GuardianAppSwiftUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -423,12 +420,14 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GuardianAppSwiftUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Guardian Push Auth";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Used to scan QR Codes";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,14 +465,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		11088AFA2A1905DF00F14628 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.0.0;
-			};
-		};
 		115796F62A1B0CE80000243A /* XCRemoteSwiftPackageReference "QRCodeReader.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/yannickl/QRCodeReader.swift.git";
@@ -501,16 +492,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		11088AFB2A1905DF00F14628 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 11088AFA2A1905DF00F14628 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		11088AFD2A1905DF00F14628 /* FirebaseMessaging */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 11088AFA2A1905DF00F14628 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseMessaging;
-		};
 		115796F72A1B0CE80000243A /* QRCodeReader */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 115796F62A1B0CE80000243A /* XCRemoteSwiftPackageReference "QRCodeReader.swift" */;

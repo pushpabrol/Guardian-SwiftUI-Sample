@@ -2,61 +2,70 @@ import SwiftUI
 import Guardian
 
 struct EnrollmentView: View {
-    @State private var enrollmentId: String = ""
-    @State private var otpSecret: String = ""
-    @State private var totp: String = "Loading..."
-    @State private var timerProgress: Double = 1.0
-    @Binding var enrolled: GuardianState?
-    @State private var localIdentifier: String = ""
-    @State private var countdown: Int = 30
-    
-    var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    let enrolled: GuardianState
+    @EnvironmentObject var refreshManager: EnrollmentListRefreshManager
 
+    
+    
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.05), Color.blue.opacity(0.15)]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
 
             VStack(spacing: 20) {
-                VStack(alignment: .leading, spacing: 10) {
-                    Text("Enrollment ID")
+                VStack(alignment: .leading, spacing: 20) {
+                    Text("Domain")
                         .font(.headline)
                         .padding(.horizontal)
-                    Text(enrollmentId)
+                    
+                    Text(enrolled.enrollmentTenantDomain)
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                        .padding(.horizontal)
+                    
+                    Text("User")
+                        .font(.headline)
+                        .padding(.horizontal)
+                    Text(enrolled.userEmail)
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                         .padding(.horizontal)
 
-                    Text("OTP Secret")
+                    Text("Enrollment ID:")
                         .font(.headline)
                         .padding(.horizontal)
-                    Text(otpSecret)
+                    Text(enrolled.identifier)
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                         .padding(.horizontal)
-
                     Text("Local Identifier")
                         .font(.headline)
                         .padding(.horizontal)
-                    Text(localIdentifier)
+                    Text(enrolled.localIdentifier)
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                         .padding(.horizontal)
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        self.unenroll(enrollment: self.enrolled){
+                            DispatchQueue.main.async {
+                                refreshManager.shouldRefresh = true // Trigger refresh of EnrollmentListView
+                            }
 
-                    HStack {
-                        Text("TOTP")
+                        }
+                    }) {
+                        Text("Unenroll")
                             .font(.headline)
-                            .foregroundColor(.black)
-                            .padding(.horizontal)
-                        Text(totp)
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
-                            .padding(.horizontal)
-                        Spacer()
-                        CircularProgress(progress: timerProgress, countdown: $countdown)
-                            .frame(width: 40, height: 40)
-                            .padding(.horizontal)
+                            .padding()
+                            .frame(maxWidth: .infinity)
+                            .background(Color.red)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
                     }
+                    .padding(.horizontal)
+
                 }
                 .padding()
                 .background(Color.white)
@@ -64,52 +73,21 @@ struct EnrollmentView: View {
                 .shadow(color: Color.black.opacity(0.2), radius: 10, x: 0, y: 10)
                 .shadow(color: Color.white.opacity(0.7), radius: 10, x: 0, y: -5)
 
-                Spacer()
 
-                Button(action: {
-                    self.unenroll()
-                }) {
-                    Text("Unenroll")
-                        .font(.headline)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.red)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
-                .padding(.horizontal)
             }
             .padding()
-            .onAppear(perform: loadData)
-            .onReceive(timer) { _ in
-                self.timerProgress -= 0.03333
-                self.countdown -= 1
-                if self.timerProgress <= 0 {
-                    self.totp = self.generateTOTP(enrolled: enrolled) // Call your TOTP generation method
-                    self.timerProgress = 1.0
-                    self.countdown = 30
-                }
+            .onAppear{
+                
             }
+
         }
     }
 
-    func loadData() {
-        // Fetch your data here
-        // This is just placeholder data
-            self.enrollmentId = enrolled!.identifier
-            self.otpSecret = enrolled!.otp!.base32Secret
-            self.totp = generateTOTP(enrolled: enrolled)
-            self.localIdentifier = enrolled!.localIdentifier
-            
-            
-        
 
-    }
-
-    func unenroll() {
-        if let enrollment = AppDelegate.state {
+    func unenroll(enrollment: GuardianState?,completion: @escaping () -> Void) -> Void {
+        if let enrollment = enrollment {
             let request = Guardian
-                .api(forDomain: AppDelegate.guardianDomain)
+                .api(forDomain: enrollment.enrollmentTenantDomain)
                 .device(forEnrollmentId: enrollment.identifier, token: enrollment.token)
                 .delete()
             debugPrint(request)
@@ -119,78 +97,34 @@ struct EnrollmentView: View {
                         print("Unenroll Error \(cause)")
                         if let cause = cause as? GuardianError {
                             if(cause.code == "device_account_not_found") {
-                                self.enrolled = nil
-                                AppDelegate.state = nil
-
+                                //self.enrolled = nil
+                                GuardianState.deleteByEnrollmentId(by: enrollment.identifier)
+                                
+                                completion() // Invoke the completion handler
+                                return
                             }
                         }
                     case .success:
-                        AppDelegate.state = nil
-                        self.enrolled = nil
+                        GuardianState.deleteByEnrollmentId(by: enrollment.identifier)
+                        completion() // Invoke the completion handler
+                        return
+                        //self.enrolled = nil
 
                     }
                 
             }
         }
     }
-    
-    func generateTOTP(enrolled: GuardianState?) -> String {
-        if let enrollment = enrolled {
-            let credential = OTPCredential()
-            credential.algorithmName = ((enrollment.otp?.algorithm.rawValue)!)
-            credential.base32Secret = enrollment.otp!.base32Secret
-            credential.digits = enrollment.otp!.digits
-            credential.period = enrollment.otp!.period
-            
-            guard let algorithm = HMACAlgorithm(rawValue: credential.algorithmName.lowercased()),
-                  
-                    let generator : Guardian.TOTP = try? Guardian.totp(base32Secret: credential.base32Secret, algorithm: algorithm, digits: credential.digits, period: credential.period) else { return "error" }
-            
-            let formatter = NumberFormatter()
-            formatter.usesGroupingSeparator = true
-            formatter.groupingSeparator = " "
-            formatter.groupingSize = 3
-            formatter.minimumIntegerDigits = 6
-            formatter.paddingCharacter = "0"
-            
-            return String(generator.code())
-        }
-        return "error"
-    }
+
 }
 
-
-struct CircularProgress: View {
-    var progress: Double
-    @Binding var countdown: Int
-
-    var body: some View {
-        ZStack {
-            Circle()
-                .stroke(lineWidth: 2)
-                .opacity(0.3)
-                .foregroundColor(Color.black)
-
-            Circle()
-                .trim(from: 0.0, to: CGFloat(min(progress, 1.0)))
-                .stroke(style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .bevel))
-                .foregroundColor(Color.white)
-                .rotationEffect(Angle(degrees: 270.0))
-                .animation(.linear)
-                
-            Text("\(countdown)")
-                .font(.caption)
-                .fontWeight(.bold)
-                .foregroundColor(Color.black)
-        }
-    }
-}
 
 
 struct EnrollmentView_Previews: PreviewProvider {
-    @State static var enrolled: GuardianState? = GuardianState.init(identifier: "dev_asdad", localIdentifier: UIDevice.current.identifierForVendor!.uuidString, token: "1231231231231231231323", keyTag: "1222", otp: OTPParameters(base32Secret: "3SLSWZPQQBB7WBRYDAQZ5J77W5D7I6GU") )
+    @State static var enrolled: GuardianState? = GuardianState.init(identifier: "dev_asdad", localIdentifier: UIDevice.current.identifierForVendor!.uuidString, token: "1231231231231231231323", keyTag: "1222", otp: OTPParameters(base32Secret: "3SLSWZPQQBB7WBRYDAQZ5J77W5D7I6GU"), userEmail: "pushp.abrol@gmail.com", enrollmentTenantDomain: "sca-poc-cancun.guardian.us.auth0.com")
+    @State static var shouldGoBack = false
     static var previews: some View {
-        EnrollmentView(enrolled: $enrolled)
+        EnrollmentView(enrolled: enrolled!)
     }
 }
 
