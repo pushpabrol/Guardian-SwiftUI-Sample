@@ -41,10 +41,11 @@ struct ContentView: View {
                                 .font(.title)
                             Text("Scan QR Code to Enroll")
                                 .font(.headline)
+                            Spacer()
                         }
                         .padding()
-                        .foregroundColor(.white)
-                        .background(Color.blue)
+                        .foregroundColor(.blue)
+                        .background(.clear)
                         .cornerRadius(10)
                     }
                     .sheet(isPresented: $isPresentingScanner) {
@@ -71,7 +72,7 @@ struct ContentView: View {
     func processEnrollment(with string: String, completion: @escaping () -> Void) {
         let barCodeUri = string
         print(barCodeUri)
-        var datafromUrl = extractEmailAndDomain(from: barCodeUri);
+        let datafromUrl = extractEmailAndDomain(from: barCodeUri);
         
         guard let signingKey = try? KeychainRSAPrivateKey.new(with: ContentView.RSA_KEY_PRIVATE_TAG),
             let verificationKey = try? signingKey.verificationKey() else {

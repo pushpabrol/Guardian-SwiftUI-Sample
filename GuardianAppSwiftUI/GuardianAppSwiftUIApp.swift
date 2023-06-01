@@ -156,8 +156,8 @@ public class NotificationCenter: NSObject, UNUserNotificationCenterDelegate, Obs
     
     public func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         
-        let content = notification.request.content
-        let identifier = notification.request.identifier
+        //let content = notification.request.content
+        //let identifier = notification.request.identifier
         let userInfo = notification.request.content.userInfo
         print(userInfo)
 
@@ -168,7 +168,7 @@ public class NotificationCenter: NSObject, UNUserNotificationCenterDelegate, Obs
     }
     
     public func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-            let content = response.notification.request.content
+            //let content = response.notification.request.content
         
         let identifier = response.actionIdentifier
         let userInfo = response.notification.request.content.userInfo

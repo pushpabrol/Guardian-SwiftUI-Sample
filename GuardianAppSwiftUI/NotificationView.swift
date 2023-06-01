@@ -2,7 +2,6 @@ import SwiftUI
 import Combine
 import Guardian
 import JWTDecode
-
 struct NotificationView: View {
     @EnvironmentObject var notificationCenter: NotificationCenter
     @State var browserLabel: String = "Unknown"
@@ -79,7 +78,7 @@ struct NotificationView: View {
                                 .font(.headline)
                                 .padding()
                                 .frame(width: 130, height: 50)
-                                .background(Color.green)
+                                .background(Color.blue)
                                 .foregroundColor(.white)
                                 .cornerRadius(10)
                                 .scaleEffect(buttonScale)
@@ -92,8 +91,8 @@ struct NotificationView: View {
                                 .font(.headline)
                                 .padding()
                                 .frame(width: 130, height: 50)
-                                .background(Color.red)
-                                .foregroundColor(.white)
+                                .background(Color.gray)
+                                .foregroundColor(.black)
                                 .cornerRadius(10)
                                 .scaleEffect(buttonScale)
                         }
@@ -110,7 +109,17 @@ struct NotificationView: View {
             }
             .padding()
             .onAppear {
-                self.loadData(enrollment: GuardianState.loadByEnrollmentId(by: notificationCenter.authenticationNotification!.enrollmentId))
+                if(notificationCenter.authenticationNotification != nil)
+                {
+                    self.loadData(enrollment: GuardianState.loadByEnrollmentId(by: notificationCenter.authenticationNotification!.enrollmentId))
+                }
+                else {
+                    dateLabel = Date().formatted(date: .abbreviated, time: Date.FormatStyle.TimeStyle.standard)
+                    merchantName = "blah"
+                    paymentAmount = "100"
+                    username = "p"
+                    account = "10000aedafd"
+                }
             }
 
             if showAllowAlert {
@@ -209,6 +218,19 @@ struct NotificationView: View {
     }
 }
 
+struct NotificationView_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        
+        NotificationView().environmentObject({ () -> NotificationCenter in
+            let envObj = NotificationCenter.init()
+                           return envObj
+                       }() )
+
+    }
+}
+
+
 
 struct AuthorizationDetails: Codable { // or Decodable
   let account: String
@@ -218,3 +240,6 @@ struct AuthorizationDetails: Codable { // or Decodable
   let type: String
     
 }
+
+
+

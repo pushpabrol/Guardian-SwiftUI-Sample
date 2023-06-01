@@ -17,8 +17,8 @@ struct EnrollmentListView: View {
     private func loadData() {
         // Add your code to load enrollments here
         enrollments = GuardianState.loadAll()! // Replace with actual data
-//        let enrollment1 = GuardianState.init(identifier: "test", localIdentifier: "123123", token: "q223312323123", keyTag: "1231232312", otp: OTPParameters(base32Secret: "3SLSWZPQQBB7WBRYDAQZ5J77W5D7I6GU"),userEmail: "pushp.abrol@gmail.com", enrollmentTenantDomain: "sca-poc-cancun.guardian.us.auth0.com")
-//        enrollments.append(enrollment1)
+        let enrollment1 = GuardianState.init(identifier: "test", localIdentifier: "123123", token: "q223312323123", keyTag: "1231232312", otp: OTPParameters(base32Secret: "3SLSWZPQQBB7WBRYDAQZ5J77W5D7I6GU"),userEmail: "pushp.abrol@gmail.com", enrollmentTenantDomain: "sca-poc-cancun.guardian.us.auth0.com")
+        enrollments.append(enrollment1)
         
     }
         
@@ -28,12 +28,15 @@ struct EnrollmentListView: View {
                 .edgesIgnoringSafeArea(.all)
             NavigationView {
                 List(enrollments, id: \.identifier) { enrollment in
-                    NavigationLink(destination: EnrollmentView(enrolled: enrollment).border(.white).padding(.vertical,-50).padding(.bottom,20)) {
-                        EnrollmentRowView(enrollment: enrollment).environmentObject(refreshManager)
-                    }
+                    NavigationLink(destination: EnrollmentView(enrolled: enrollment).border(.white)
+                        .padding(.vertical,-20)
+                        .padding(.bottom,20)){
+                        EnrollmentRowView(enrollment: enrollment).environmentObject(refreshManager)}
                 }
                 .onAppear(perform: loadData)
-                .navigationBarTitle("Enrollments")
+                .navigationBarTitle("Enrollments", displayMode: .inline)
+                .navigationBarHidden(true)
+                .navigationBarTitleDisplayMode(.large)
                 .onReceive(refreshManager.$shouldRefresh) { shouldRefresh in
                     if shouldRefresh {
                         loadData()
@@ -52,32 +55,32 @@ struct EnrollmentListView: View {
         let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
         @State private var totp: String = "Loading..."
         var body: some View {
-                VStack {
-                    Text("User: \(enrollment.userEmail)")
-                        .font(.caption)
-                    
-                    Text("Tenant: \(enrollment.enrollmentTenantDomain.split(separator: ".").map { String($0) }[0])")
-                        .font(.caption2)
-                  
-                    HStack {
-                        Text("\(totp)")
-                            .font(.title)
-                            .foregroundColor(countdown < 5 ? .red : .blue)
-                        Button(action: {
-                                UIPasteboard.general.string = totp
-                                isCopied = true
-                            Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { _ in
-                                       isCopied = false
-                                   }
-                            }) {
-                                Image(systemName: isCopied ? "doc.on.doc.fill" : "doc.on.doc")
-                                    .foregroundColor(isCopied ? .green : .blue)
-                            } .buttonStyle(PlainButtonStyle())
-                        Spacer()
-                        ListCircularProgress(progress: timerProgress, countdown: $countdown)
-                            .frame(width: 40, height: 40)
-                    }
+            VStack {
+                Text("User: \(enrollment.userEmail)")
+                    .font(.caption)
+                
+                Text("Tenant: \(enrollment.enrollmentTenantDomain.split(separator: ".").map { String($0) }[0])")
+                    .font(.caption2)
+                
+                HStack {
+                    Text("\(totp)")
+                        .font(.title)
+                        .foregroundColor(countdown < 5 ? .red : .blue)
+                    Button(action: {
+                        UIPasteboard.general.string = totp
+                        isCopied = true
+                        Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { _ in
+                            isCopied = false
+                        }
+                    }) {
+                        Image(systemName: isCopied ? "doc.on.doc.fill" : "doc.on.doc")
+                            .foregroundColor(isCopied ? .green : .blue)
+                    } .buttonStyle(PlainButtonStyle())
+                    Spacer()
+                    ListCircularProgress(progress: timerProgress, countdown: $countdown)
+                        .frame(width: 40, height: 40)
                 }
+            }
             
             .onAppear {
                 isCopied = false
@@ -89,7 +92,7 @@ struct EnrollmentListView: View {
             }
             .onReceive(timer) { _ in
                 self.totp = self.generateTOTP(enrollment: enrollment)
-                var steps = timeSteps(from: Date().timeIntervalSince1970, period: 30)
+                let steps = timeSteps(from: Date().timeIntervalSince1970, period: 30)
                 countdown =  (steps + 1)*30 - Int(Date().timeIntervalSince1970)
                 timerProgress = 0.03333*Double(countdown)
                 if countdown <= 0 {
@@ -152,7 +155,7 @@ struct EnrollmentListView: View {
                     .rotationEffect(Angle(degrees: -90))
                 
                 Text("\(countdown)")
-                    .font(.headline)
+                    .font(.caption2)
                     .foregroundColor(.black)
             }
         }
