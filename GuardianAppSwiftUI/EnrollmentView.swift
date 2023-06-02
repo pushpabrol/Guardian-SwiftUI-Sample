@@ -8,6 +8,7 @@ struct EnrollmentView: View {
     @State private var timerProgress: Double = 1.0
     @State private var countdown: Int = 30
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    let timerFlash = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
     @State private var totp: String = "Loading..."
     @State private var flashingColor: Color = Color.red
 
@@ -54,10 +55,10 @@ struct EnrollmentView: View {
                     HStack {
                         Text("\(totp)")
                             .font(.title)
-                            .foregroundColor(countdown < 5 ? flashingColor : .blue)
-                            .onReceive(timer) { _ in
-                                if countdown < 5 {
-                                    flashingColor = flashingColor == .red ? .secondary : .red
+                            .foregroundColor(countdown < 6 ? flashingColor : .blue)
+                            .onReceive(timerFlash) { _ in
+                                if countdown < 6 {
+                                    flashingColor = flashingColor == .blue ? .red : .blue
                                 }
                             }
                         Button(action: {
