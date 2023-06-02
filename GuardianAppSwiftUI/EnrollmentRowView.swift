@@ -47,7 +47,6 @@ struct EnrollmentRowView: View {
                 Spacer()
                 CircularProgressView(progress: timerProgress, countdown: $countdown)
                     .frame(width: 40, height: 40)
-                Spacer()
             }
         }
         .onAppear {

@@ -17,6 +17,7 @@ struct CircularProgressView: View {
                 .stroke(lineWidth: 4)
                 .opacity(0.3)
                 .foregroundColor(.gray)
+                .frame(width: .pi)
             
             Circle()
                 .trim(from: 0.0, to: CGFloat(min(progress, 1.0)))
