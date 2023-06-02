@@ -32,9 +32,9 @@ struct CircularProgressView: View {
 }
 
 struct CircularProgressView_Previews: PreviewProvider {
-    @State static var countdown = 20
+    @State static var countdown = 22
 
     static var previews: some View {
-        CircularProgressView(progress: 10.0, countdown:$countdown )
+        CircularProgressView(progress: 0.75, countdown:$countdown )
     }
 }
