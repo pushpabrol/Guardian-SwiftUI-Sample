@@ -18,6 +18,9 @@
 		115797012A1BB8BA0000243A /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115797002A1BB8BA0000243A /* NotificationView.swift */; };
 		115797042A1BB9170000243A /* JWTDecode in Frameworks */ = {isa = PBXBuildFile; productRef = 115797032A1BB9170000243A /* JWTDecode */; };
 		115797062A1BCE770000243A /* EnrollmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115797052A1BCE770000243A /* EnrollmentView.swift */; };
+		116D83342A2988DA00E13E27 /* EnrollmentRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D83332A2988DA00E13E27 /* EnrollmentRowView.swift */; };
+		116D83362A298AC200E13E27 /* OTPFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D83352A298AC200E13E27 /* OTPFunctions.swift */; };
+		116D83382A298BDD00E13E27 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D83372A298BDD00E13E27 /* CircularProgressView.swift */; };
 		11D8F2DB2A243E8B0092A4A4 /* EnrollmentsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D8F2DA2A243E8B0092A4A4 /* EnrollmentsListView.swift */; };
 		19BCCD36D9DA3FF5CFE03DA2 /* Pods_GuardianAppSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D65202F14266663019885C /* Pods_GuardianAppSwiftUI.framework */; };
 /* End PBXBuildFile section */
@@ -34,6 +37,9 @@
 		115796FE2A1B17F70000243A /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		115797002A1BB8BA0000243A /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		115797052A1BCE770000243A /* EnrollmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentView.swift; sourceTree = "<group>"; };
+		116D83332A2988DA00E13E27 /* EnrollmentRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentRowView.swift; sourceTree = "<group>"; };
+		116D83352A298AC200E13E27 /* OTPFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPFunctions.swift; sourceTree = "<group>"; };
+		116D83372A298BDD00E13E27 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		11D8F2DA2A243E8B0092A4A4 /* EnrollmentsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentsListView.swift; sourceTree = "<group>"; };
 		C9342A2B32CF7D351B1DCA7C /* Pods-GuardianAppSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuardianAppSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-GuardianAppSwiftUI/Pods-GuardianAppSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		E8A744949FE3220F8E4911D7 /* Pods-GuardianAppSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuardianAppSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-GuardianAppSwiftUI/Pods-GuardianAppSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +93,9 @@
 				115797002A1BB8BA0000243A /* NotificationView.swift */,
 				115797052A1BCE770000243A /* EnrollmentView.swift */,
 				11D8F2DA2A243E8B0092A4A4 /* EnrollmentsListView.swift */,
+				116D83332A2988DA00E13E27 /* EnrollmentRowView.swift */,
+				116D83352A298AC200E13E27 /* OTPFunctions.swift */,
+				116D83372A298BDD00E13E27 /* CircularProgressView.swift */,
 			);
 			path = GuardianAppSwiftUI;
 			sourceTree = "<group>";
@@ -245,7 +254,10 @@
 				11088AD02A186F8900F14628 /* GuardianAppSwiftUIApp.swift in Sources */,
 				115796FA2A1B118C0000243A /* State.swift in Sources */,
 				115797062A1BCE770000243A /* EnrollmentView.swift in Sources */,
+				116D83342A2988DA00E13E27 /* EnrollmentRowView.swift in Sources */,
+				116D83362A298AC200E13E27 /* OTPFunctions.swift in Sources */,
 				115797012A1BB8BA0000243A /* NotificationView.swift in Sources */,
+				116D83382A298BDD00E13E27 /* CircularProgressView.swift in Sources */,
 				11D8F2DB2A243E8B0092A4A4 /* EnrollmentsListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,7 +316,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -359,7 +371,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

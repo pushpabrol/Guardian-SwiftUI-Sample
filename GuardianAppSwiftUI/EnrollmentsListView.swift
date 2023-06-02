@@ -21,155 +21,85 @@ struct EnrollmentListView: View {
         enrollments.append(enrollment1)
         
     }
+    
+    func unenroll(enrollment: GuardianState?,completion: @escaping () -> Void) -> Void {
+        if let enrollment = enrollment {
+            let request = Guardian
+                .api(forDomain: enrollment.enrollmentTenantDomain)
+                .device(forEnrollmentId: enrollment.identifier, token: enrollment.token)
+                .delete()
+            debugPrint(request)
+            request.start { result in
+                    switch result {
+                    case .failure(let cause):
+                        print("Unenroll Error \(cause)")
+                        if let cause = cause as? GuardianError {
+                            if(cause.code == "device_account_not_found") {
+                                //self.enrollment = nil
+                                GuardianState.deleteByEnrollmentId(by: enrollment.identifier)
+                                
+                                completion() // Invoke the completion handler
+                                return
+                            }
+                        }
+                    case .success:
+                        GuardianState.deleteByEnrollmentId(by: enrollment.identifier)
+                        completion() // Invoke the completion handler
+                        return
+                        //self.enrollment = nil
+
+                    }
+                
+            }
+        }
+    }
         
     var body: some View {
-        ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.05), Color.blue.opacity(0.15)]), startPoint: .top, endPoint: .bottom)
-                .edgesIgnoringSafeArea(.all)
             
             NavigationView {
-                List(enrollments, id: \.identifier) { enrollment in
-                    NavigationLink(destination: EnrollmentView(enrolled: enrollment)
-                        .padding(.vertical,-20)
-                        .padding(.bottom,20)){
-                            EnrollmentRowView(enrollment: enrollment).environmentObject(refreshManager)}
-                }
-                
-                    .navigationBarTitle("Enrollments", displayMode: .inline)
-                    .navigationBarHidden(true)
-                    .navigationBarTitleDisplayMode(.large)
-                    .onReceive(refreshManager.$shouldRefresh) { shouldRefresh in
-                        if shouldRefresh {
-                            loadData()
-                            refreshManager.shouldRefresh = false // Reset the refresh state
+                List {
+                    ForEach(enrollments, id: \.identifier) { enrollment in
+                        NavigationLink(destination: EnrollmentView(enrollment: enrollment)
+                                        .padding(.bottom, 20)) {
+                            EnrollmentRowView(enrollment: enrollment)
+                                .environmentObject(refreshManager)
+                                        }
+                    }
+                    .onDelete { indexSet in
+                        for index in indexSet {
+                            let enrollmentSelected = enrollments[index]
+                            self.unenroll(enrollment: enrollmentSelected){
+                                print("unenrolled")
+                                DispatchQueue.main.async {
+                                    refreshManager.shouldRefresh = true // Trigger refresh of EnrollmentListView
+                                }
+
+                            }
+                           
                         }
                     }
-            }.onAppear(perform: loadData)
-        }
-            
-        
-    }
-
-    struct EnrollmentRowView: View {
-        @State private var isCopied = false
-        let enrollment: GuardianState
-        @State private var timerProgress: Double = 1.0
-        @State private var countdown: Int = 30
-        let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-        @State private var totp: String = "Loading..."
-        var body: some View {
-            VStack {
-                Text("User: \(enrollment.userEmail)")
-                    .font(.caption)
-                
-                Text("Tenant: \(enrollment.enrollmentTenantDomain.split(separator: ".").map { String($0) }[0])")
-                    .font(.caption2)
-                
-                HStack {
-                    Text("\(totp)")
-                        .font(.title)
-                        .foregroundColor(countdown < 5 ? .red : .blue)
-                    Button(action: {
-                        UIPasteboard.general.string = totp
-                        isCopied = true
-                        Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { _ in
-                            isCopied = false
-                        }
-                    }) {
-                        Image(systemName: isCopied ? "doc.on.doc.fill" : "doc.on.doc")
-                            .foregroundColor(isCopied ? .green : .blue)
-                    } .buttonStyle(PlainButtonStyle())
-                    Spacer()
-                    ListCircularProgress(progress: timerProgress, countdown: $countdown)
-                        .frame(width: 40, height: 40)
+                }
+                .background(.clear)
+                .scrollContentBackground(.hidden)
+                .navigationBarTitle("Enrollments", displayMode: .inline)
+                             .navigationBarHidden(true)
+                .navigationBarTitleDisplayMode(.large)
+                .onReceive(refreshManager.$shouldRefresh) { shouldRefresh in
+                    if shouldRefresh {
+                        loadData()
+                        refreshManager.shouldRefresh = false // Reset the refresh state
+                    }
                 }
             }
-            
-            .onAppear {
-                isCopied = false
-                self.totp = self.generateTOTP(enrollment: enrollment)
-                let steps = timeSteps(from: Date().timeIntervalSince1970, period: 30)
-                countdown =  (steps + 1)*30 - Int(Date().timeIntervalSince1970)
-                timerProgress = 0.03333*Double(countdown)
-
-            }
-            .onReceive(timer) { _ in
-                self.totp = self.generateTOTP(enrollment: enrollment)
-                let steps = timeSteps(from: Date().timeIntervalSince1970, period: 30)
-                countdown =  (steps + 1)*30 - Int(Date().timeIntervalSince1970)
-                timerProgress = 0.03333*Double(countdown)
-                if countdown <= 0 {
-                    isCopied = false
-                    timerProgress = 1.0 - Double(countdown)*(0.03333)
-                    countdown = 30 + countdown
-
-                }
-            }
-        }
-
-        func generateTOTP(enrollment: GuardianState) -> String {
-                let credential = OTPCredential()
-                credential.algorithmName = ((enrollment.otp?.algorithm.rawValue)!)
-                credential.base32Secret = enrollment.otp!.base32Secret
-                credential.digits = enrollment.otp!.digits
-                credential.period = enrollment.otp!.period
-                
-                guard let algorithm = HMACAlgorithm(rawValue: credential.algorithmName.lowercased()),
-                      
-                        let generator : Guardian.TOTP = try? Guardian.totp(base32Secret: credential.base32Secret, algorithm: algorithm, digits: credential.digits, period: credential.period) else { return "error" }
-                
-                let formatter = NumberFormatter()
-                formatter.usesGroupingSeparator = true
-                formatter.groupingSeparator = " "
-                formatter.groupingSize = 3
-                formatter.minimumIntegerDigits = 6
-                formatter.paddingCharacter = "0"
-                
-            return String(generator.code())
-
-        }
+            .onAppear(perform: loadData)
         
-        private func timeSteps(from time: TimeInterval, period: Int) -> Int {
-            return Int(time / Double(period))
-        }
-
-       
-        
-        
-    }
-    
-    
-
-    struct ListCircularProgress: View {
-        let progress: Double
-        @Binding var countdown: Int
-        
-        var body: some View {
-            ZStack {
-                Circle()
-                    .stroke(lineWidth: 4)
-                    .opacity(0.3)
-                    .foregroundColor(.gray)
-                
-                Circle()
-                    .trim(from: 0.0, to: CGFloat(min(progress, 1.0)))
-                    .stroke(style: StrokeStyle(lineWidth: 4, lineCap: .round, lineJoin: .round))
-                    .foregroundColor(.blue)
-                    .rotationEffect(Angle(degrees: -90))
-                
-                Text("\(countdown)")
-                    .font(.caption2)
-            }
-        }
     }
 }
 
 struct EnrollmentsListView_Previews: PreviewProvider {
     @State static var refresh: Bool = true
     @StateObject static var refreshManager = EnrollmentListRefreshManager()
-
     static var previews: some View {
-        
         EnrollmentListView().environmentObject(refreshManager)
     }
 }

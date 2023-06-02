@@ -1071,8 +1071,8 @@
             filePath = "GuardianAppSwiftUI/EnrollmentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
             landmarkName = "unenroll(enrollment:completion:)"
             landmarkType = "7">
             <Locations>
@@ -1134,8 +1134,8 @@
             filePath = "GuardianAppSwiftUI/EnrollmentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
             landmarkName = "unenroll(enrollment:completion:)"
             landmarkType = "7">
             <Locations>
@@ -1197,8 +1197,8 @@
             filePath = "GuardianAppSwiftUI/EnrollmentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "unenroll(enrollment:completion:)"
             landmarkType = "7">
             <Locations>
@@ -1466,8 +1466,8 @@
             filePath = "GuardianAppSwiftUI/EnrollmentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
             landmarkName = "previews"
             landmarkType = "24">
             <Locations>
@@ -1500,6 +1500,51 @@
                   startingLineNumber = "122"
                   endingLineNumber = "122"
                   offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "CF93C957-D9F3-4553-AC09-2BD4CC83062A - abf9c484cb17e851"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static GuardianAppSwiftUI.EnrollmentView_Previews.previews.getter : some"
+                  moduleName = "GuardianAppSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/EnrollmentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "208"
+                  endingLineNumber = "208"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "CF93C957-D9F3-4553-AC09-2BD4CC83062A - abf9c484cb17e640"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static GuardianAppSwiftUI.EnrollmentView_Previews.previews.getter : some"
+                  moduleName = "GuardianAppSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/EnrollmentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "CF93C957-D9F3-4553-AC09-2BD4CC83062A - abf9c484cb17e529"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static GuardianAppSwiftUI.EnrollmentView_Previews.previews.getter : some"
+                  moduleName = "GuardianAppSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/EnrollmentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "168"
+                  endingLineNumber = "168"
+                  offsetFromSymbolStart = "116">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1897,22 +1942,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2EBFB489-1229-4F17-84C3-FA3F623086D0"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/EnrollmentsListView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "FFC2F098-E2FB-4BEA-8DC8-C67024C220F4"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -2162,38 +2191,6 @@
                   offsetFromSymbolStart = "204">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0130AB6A-8D05-4159-8F29-B02CF6C2CA4C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/EnrollmentsListView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
-            landmarkName = "generateTOTP(enrollment:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8341E503-A260-4F5B-9E70-61C2F5EEEE52"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/EnrollmentsListView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
-            landmarkName = "ListCircularProgress"
-            landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
