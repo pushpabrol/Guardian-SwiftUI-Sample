@@ -41,8 +41,8 @@ struct EnrollmentRowView: View {
                         isCopied = false
                     }
                 }) {
-                    Image(systemName: isCopied ? "doc.on.doc.fill" : "doc.on.doc")
-                        .foregroundColor(isCopied ? .green : .blue)
+                    Image(systemName: isCopied ? "doc.on.clipboard.fill" : "doc.on.clipboard")
+                        .foregroundColor(isCopied ? .blue : .secondary)
                 } .buttonStyle(PlainButtonStyle())
                 Spacer()
                 CircularProgressView(progress: timerProgress, countdown: $countdown)
