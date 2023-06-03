@@ -33,9 +33,8 @@ struct ContentView: View {
     @StateObject private var refreshManager = EnrollmentListRefreshManager()
     @State private var biometricAuthenticationResult: BiometricAuthenticationResult = .none
 
-
     var body: some View {
-        ZStack {
+        ZStack(alignment: .topTrailing) {
             LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.05), Color.blue.opacity(0.10)]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
             if notificationCenter.authenticationNotification != nil {
@@ -52,6 +51,11 @@ struct ContentView: View {
                             Text("Scan QR Code to Enroll")
                                 .font(.headline)
                             Spacer()
+                            Image("a0")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 32, height: 32) // Adjust the size as needed
+                                        .padding(8)
                         }
                         .padding()
                         .foregroundColor(.blue)

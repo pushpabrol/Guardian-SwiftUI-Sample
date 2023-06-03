@@ -11,6 +11,7 @@
 		11088AD22A186F8900F14628 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11088AD12A186F8900F14628 /* ContentView.swift */; };
 		11088AD42A186F8B00F14628 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11088AD32A186F8B00F14628 /* Assets.xcassets */; };
 		11088AD72A186F8B00F14628 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11088AD62A186F8B00F14628 /* Preview Assets.xcassets */; };
+		111E06222A2BA3BF005D7DB5 /* a0.png in Resources */ = {isa = PBXBuildFile; fileRef = 111E06212A2BA3BF005D7DB5 /* a0.png */; };
 		115796F82A1B0CE80000243A /* QRCodeReader in Frameworks */ = {isa = PBXBuildFile; productRef = 115796F72A1B0CE80000243A /* QRCodeReader */; };
 		115796FA2A1B118C0000243A /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115796F92A1B118C0000243A /* State.swift */; };
 		115796FD2A1B11B50000243A /* SimpleKeychain in Frameworks */ = {isa = PBXBuildFile; productRef = 115796FC2A1B11B50000243A /* SimpleKeychain */; };
@@ -33,6 +34,7 @@
 		11088AD62A186F8B00F14628 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		11088AF92A18FA9300F14628 /* GuardianAppSwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GuardianAppSwiftUI.entitlements; sourceTree = "<group>"; };
 		11088AFF2A1905F500F14628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		111E06212A2BA3BF005D7DB5 /* a0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = a0.png; path = ../../../a0.png; sourceTree = "<group>"; };
 		115796F92A1B118C0000243A /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		115796FE2A1B17F70000243A /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		115797002A1BB8BA0000243A /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 		11088ACE2A186F8900F14628 /* GuardianAppSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				111E06212A2BA3BF005D7DB5 /* a0.png */,
 				11088AFF2A1905F500F14628 /* Info.plist */,
 				11088AF92A18FA9300F14628 /* GuardianAppSwiftUI.entitlements */,
 				11088ACF2A186F8900F14628 /* GuardianAppSwiftUIApp.swift */,
@@ -197,6 +200,7 @@
 			files = (
 				11088AD72A186F8B00F14628 /* Preview Assets.xcassets in Resources */,
 				11088AD42A186F8B00F14628 /* Assets.xcassets in Resources */,
+				111E06222A2BA3BF005D7DB5 /* a0.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
