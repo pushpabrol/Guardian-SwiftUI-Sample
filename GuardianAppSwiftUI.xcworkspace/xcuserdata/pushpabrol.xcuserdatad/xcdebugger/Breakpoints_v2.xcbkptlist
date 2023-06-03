@@ -7,823 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C42C0BE6-87D5-497E-B723-C006D1AD0983"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "application(_:didRegisterForRemoteNotificationsWithDeviceToken:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "C42C0BE6-87D5-497E-B723-C006D1AD0983 - 80cb2278e8dad5bc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.AppDelegate.application(_: __C.UIApplication, didRegisterForRemoteNotificationsWithDeviceToken: Foundation.Data) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "208">
-               </Location>
-               <Location
-                  uuid = "C42C0BE6-87D5-497E-B723-C006D1AD0983 - 80cb2278e8dad5bc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.AppDelegate.application(_: __C.UIApplication, didRegisterForRemoteNotificationsWithDeviceToken: Foundation.Data) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "80">
-               </Location>
-               <Location
-                  uuid = "C42C0BE6-87D5-497E-B723-C006D1AD0983 - 80cb2278e8dad41f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.AppDelegate.application(_: __C.UIApplication, didRegisterForRemoteNotificationsWithDeviceToken: Foundation.Data) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "324">
-               </Location>
-               <Location
-                  uuid = "C42C0BE6-87D5-497E-B723-C006D1AD0983 - 80cb2278e8dad41f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.AppDelegate.application(_: __C.UIApplication, didRegisterForRemoteNotificationsWithDeviceToken: Foundation.Data) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "340">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "06907738-1FFD-4C6C-BDB1-1B1E0BC395F3"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2F810349-C6BD-4332-9B0A-62F8A277A2A6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "application(_:didFailToRegisterForRemoteNotificationsWithError:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "2F810349-C6BD-4332-9B0A-62F8A277A2A6 - a9cabe11d6234ff7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.AppDelegate.application(_: __C.UIApplication, didFailToRegisterForRemoteNotificationsWithError: Swift.Error) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "324">
-               </Location>
-               <Location
-                  uuid = "2F810349-C6BD-4332-9B0A-62F8A277A2A6 - a9cabe11d6234ff7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.AppDelegate.application(_: __C.UIApplication, didFailToRegisterForRemoteNotificationsWithError: Swift.Error) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22"
-                  offsetFromSymbolStart = "72">
-               </Location>
-               <Location
-                  uuid = "2F810349-C6BD-4332-9B0A-62F8A277A2A6 - a9cabe11d6234f54"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.AppDelegate.application(_: __C.UIApplication, didFailToRegisterForRemoteNotificationsWithError: Swift.Error) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "72">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AF22476E-F533-4AF7-9871-20EFA8BA8776"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "application(_:open:options:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "AF22476E-F533-4AF7-9871-20EFA8BA8776 - 5f5fa7ec11b603d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.AppDelegate.application(_: __C.UIApplication, open: Foundation.URL, options: Swift.Dictionary&lt;__C.UIApplicationOpenURLOptionsKey, Any&gt;) -&gt; Swift.Bool"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "416">
-               </Location>
-               <Location
-                  uuid = "AF22476E-F533-4AF7-9871-20EFA8BA8776 - 5f5fa7ec11b6190"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.AppDelegate.application(_: __C.UIApplication, open: Foundation.URL, options: Swift.Dictionary&lt;__C.UIApplicationOpenURLOptionsKey, Any&gt;) -&gt; Swift.Bool"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "416">
-               </Location>
-               <Location
-                  uuid = "AF22476E-F533-4AF7-9871-20EFA8BA8776 - 5f5fa7ec11b6190"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.AppDelegate.application(_: __C.UIApplication, open: Foundation.URL, options: Swift.Dictionary&lt;__C.UIApplicationOpenURLOptionsKey, Any&gt;) -&gt; Swift.Bool"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "356">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A550810E-B3C7-4C9F-A1E1-E3D4BF04FB91"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "application(_:open:options:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "A550810E-B3C7-4C9F-A1E1-E3D4BF04FB91 - 5f5fa7ec11b61b1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.AppDelegate.application(_: __C.UIApplication, open: Foundation.URL, options: Swift.Dictionary&lt;__C.UIApplicationOpenURLOptionsKey, Any&gt;) -&gt; Swift.Bool"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "940">
-               </Location>
-               <Location
-                  uuid = "A550810E-B3C7-4C9F-A1E1-E3D4BF04FB91 - 5f5fa7ec11b61b1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.AppDelegate.application(_: __C.UIApplication, open: Foundation.URL, options: Swift.Dictionary&lt;__C.UIApplicationOpenURLOptionsKey, Any&gt;) -&gt; Swift.Bool"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "1020">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "587D847F-7046-448C-8381-E7B55336F656"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "180"
-            endingLineNumber = "180"
-            landmarkName = "userNotificationCenter(_:didReceive:withCompletionHandler:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "587D847F-7046-448C-8381-E7B55336F656 - cd7e720f064c6f51"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, willPresent: __C.UNNotification, withCompletionHandler: (__C.UNNotificationPresentationOptions) -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "167"
-                  endingLineNumber = "167"
-                  offsetFromSymbolStart = "1240">
-               </Location>
-               <Location
-                  uuid = "587D847F-7046-448C-8381-E7B55336F656 - 3d6c3380dbca9cdb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Guardian.Result&lt;Guardian.NoContent&gt;) -&gt; () in GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, willPresent: __C.UNNotification, withCompletionHandler: (__C.UNNotificationPresentationOptions) -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "168"
-                  endingLineNumber = "168"
-                  offsetFromSymbolStart = "84">
-               </Location>
-               <Location
-                  uuid = "587D847F-7046-448C-8381-E7B55336F656 - 276096bd9839c11d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse, withCompletionHandler: () -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "167"
-                  endingLineNumber = "167"
-                  offsetFromSymbolStart = "356">
-               </Location>
-               <Location
-                  uuid = "587D847F-7046-448C-8381-E7B55336F656 - 276096bd9839c1a0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse, withCompletionHandler: () -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "170"
-                  endingLineNumber = "170"
-                  offsetFromSymbolStart = "356">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4B13A3AA-D4B7-431D-9753-F89A2D84AF1A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
-            landmarkName = "userNotificationCenter(_:willPresent:withCompletionHandler:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4B13A3AA-D4B7-431D-9753-F89A2D84AF1A - cd7e720f064c699f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, willPresent: __C.UNNotification, withCompletionHandler: (__C.UNNotificationPresentationOptions) -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "157"
-                  endingLineNumber = "157"
-                  offsetFromSymbolStart = "904">
-               </Location>
-               <Location
-                  uuid = "4B13A3AA-D4B7-431D-9753-F89A2D84AF1A - cd7e720f064c699f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, willPresent: __C.UNNotification, withCompletionHandler: (__C.UNNotificationPresentationOptions) -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "157"
-                  endingLineNumber = "157"
-                  offsetFromSymbolStart = "680">
-               </Location>
-               <Location
-                  uuid = "4B13A3AA-D4B7-431D-9753-F89A2D84AF1A - cd7e720f064c6878"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, willPresent: __C.UNNotification, withCompletionHandler: (__C.UNNotificationPresentationOptions) -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "158"
-                  endingLineNumber = "158"
-                  offsetFromSymbolStart = "580">
-               </Location>
-               <Location
-                  uuid = "4B13A3AA-D4B7-431D-9753-F89A2D84AF1A - cd7e720f064c681b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, willPresent: __C.UNNotification, withCompletionHandler: (__C.UNNotificationPresentationOptions) -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "161"
-                  endingLineNumber = "161"
-                  offsetFromSymbolStart = "580">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8191DB48-6FED-44C3-86FC-614227BB68E2"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
-            landmarkName = "userNotificationCenter(_:willPresent:withCompletionHandler:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "8191DB48-6FED-44C3-86FC-614227BB68E2 - cd7e720f064c69be"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, willPresent: __C.UNNotification, withCompletionHandler: (__C.UNNotificationPresentationOptions) -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "156"
-                  endingLineNumber = "156"
-                  offsetFromSymbolStart = "824">
-               </Location>
-               <Location
-                  uuid = "8191DB48-6FED-44C3-86FC-614227BB68E2 - cd7e720f064c69be"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, willPresent: __C.UNNotification, withCompletionHandler: (__C.UNNotificationPresentationOptions) -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "156"
-                  endingLineNumber = "156"
-                  offsetFromSymbolStart = "532">
-               </Location>
-               <Location
-                  uuid = "8191DB48-6FED-44C3-86FC-614227BB68E2 - cd7e720f064c69be"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, willPresent: __C.UNNotification, withCompletionHandler: (__C.UNNotificationPresentationOptions) -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "156"
-                  endingLineNumber = "156"
-                  offsetFromSymbolStart = "432">
-               </Location>
-               <Location
-                  uuid = "8191DB48-6FED-44C3-86FC-614227BB68E2 - cd7e720f064c6859"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, willPresent: __C.UNNotification, withCompletionHandler: (__C.UNNotificationPresentationOptions) -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "159"
-                  endingLineNumber = "159"
-                  offsetFromSymbolStart = "432">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8E95465A-B77B-4B89-ADAC-C912365E5039"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "197"
-            endingLineNumber = "197"
-            landmarkName = "userNotificationCenter(_:didReceive:withCompletionHandler:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "8E95465A-B77B-4B89-ADAC-C912365E5039 - 276096bd9839c36e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse, withCompletionHandler: () -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "184"
-                  endingLineNumber = "184"
-                  offsetFromSymbolStart = "604">
-               </Location>
-               <Location
-                  uuid = "8E95465A-B77B-4B89-ADAC-C912365E5039 - c399317faa361d19"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Guardian.Result&lt;Guardian.NoContent&gt;) -&gt; () in GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse, withCompletionHandler: () -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "184"
-                  endingLineNumber = "184"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  uuid = "8E95465A-B77B-4B89-ADAC-C912365E5039 - c399317faa361d86"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Guardian.Result&lt;Guardian.NoContent&gt;) -&gt; () in GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse, withCompletionHandler: () -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "187"
-                  endingLineNumber = "187"
-                  offsetFromSymbolStart = "44">
-               </Location>
-               <Location
-                  uuid = "8E95465A-B77B-4B89-ADAC-C912365E5039 - c399317faa361da5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Guardian.Result&lt;Guardian.NoContent&gt;) -&gt; () in GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse, withCompletionHandler: () -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "188"
-                  endingLineNumber = "188"
-                  offsetFromSymbolStart = "44">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E7F90F82-D79C-431B-9FB8-A144CF534B1D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "application(_:didRegisterForRemoteNotificationsWithDeviceToken:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "E7F90F82-D79C-431B-9FB8-A144CF534B1D - 80cb2278e8dad5bc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.AppDelegate.application(_: __C.UIApplication, didRegisterForRemoteNotificationsWithDeviceToken: Foundation.Data) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "80">
-               </Location>
-               <Location
-                  uuid = "E7F90F82-D79C-431B-9FB8-A144CF534B1D - 80cb2278e8dad45d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.AppDelegate.application(_: __C.UIApplication, didRegisterForRemoteNotificationsWithDeviceToken: Foundation.Data) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "96">
-               </Location>
-               <Location
-                  uuid = "E7F90F82-D79C-431B-9FB8-A144CF534B1D - c96856e00a6db6e5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.String, Swift.UInt8) -&gt; Swift.String in GuardianAppSwiftUI.AppDelegate.application(_: __C.UIApplication, didRegisterForRemoteNotificationsWithDeviceToken: Foundation.Data) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "88">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "82516E54-4D7C-4ED1-83E0-0E92AEF8889B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
-            landmarkName = "init()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "82516E54-4D7C-4ED1-83E0-0E92AEF8889B - 7b41091666d7e3af"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in GuardianAppSwiftUI.NotificationCenter.init() -&gt; GuardianAppSwiftUI.NotificationCenter"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "125"
-                  endingLineNumber = "125"
-                  offsetFromSymbolStart = "84">
-               </Location>
-               <Location
-                  uuid = "82516E54-4D7C-4ED1-83E0-0E92AEF8889B - 7b41091666d7e3af"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in GuardianAppSwiftUI.NotificationCenter.init() -&gt; GuardianAppSwiftUI.NotificationCenter"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "125"
-                  endingLineNumber = "125"
-                  offsetFromSymbolStart = "96">
-               </Location>
-               <Location
-                  uuid = "82516E54-4D7C-4ED1-83E0-0E92AEF8889B - 7b41091666d7e24a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in GuardianAppSwiftUI.NotificationCenter.init() -&gt; GuardianAppSwiftUI.NotificationCenter"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "128"
-                  endingLineNumber = "128"
-                  offsetFromSymbolStart = "96">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "24CC2B30-D6BD-4392-A9C2-656B99D1BD9F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
-            landmarkName = "userNotificationCenter(_:willPresent:withCompletionHandler:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "24CC2B30-D6BD-4392-A9C2-656B99D1BD9F - cd7e720f064c6878"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, willPresent: __C.UNNotification, withCompletionHandler: (__C.UNNotificationPresentationOptions) -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "158"
-                  endingLineNumber = "158"
-                  offsetFromSymbolStart = "580">
-               </Location>
-               <Location
-                  uuid = "24CC2B30-D6BD-4392-A9C2-656B99D1BD9F - cd7e720f064c681b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, willPresent: __C.UNNotification, withCompletionHandler: (__C.UNNotificationPresentationOptions) -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "161"
-                  endingLineNumber = "161"
-                  offsetFromSymbolStart = "580">
-               </Location>
-               <Location
-                  uuid = "24CC2B30-D6BD-4392-A9C2-656B99D1BD9F - cd7e720f064c68b6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, willPresent: __C.UNNotification, withCompletionHandler: (__C.UNNotificationPresentationOptions) -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "164"
-                  endingLineNumber = "164"
-                  offsetFromSymbolStart = "580">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9E873169-015F-41E1-9E74-DFC5DF6403C3"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
-            landmarkName = "userNotificationCenter(_:willPresent:withCompletionHandler:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "9E873169-015F-41E1-9E74-DFC5DF6403C3 - cd7e720f064c681b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, willPresent: __C.UNNotification, withCompletionHandler: (__C.UNNotificationPresentationOptions) -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "161"
-                  endingLineNumber = "161"
-                  offsetFromSymbolStart = "660">
-               </Location>
-               <Location
-                  uuid = "9E873169-015F-41E1-9E74-DFC5DF6403C3 - cd7e720f064c68b6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, willPresent: __C.UNNotification, withCompletionHandler: (__C.UNNotificationPresentationOptions) -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "164"
-                  endingLineNumber = "164"
-                  offsetFromSymbolStart = "660">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "7F81B9A6-35B9-46F5-8AE2-33E46495619E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -840,198 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D05AFAEA-72EC-4F65-91C6-83849102D737"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "application(_:didRegisterForRemoteNotificationsWithDeviceToken:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0C4BF88E-A90C-481C-A692-AA35AA394B65"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "166"
-            endingLineNumber = "166"
-            landmarkName = "userNotificationCenter(_:willPresent:withCompletionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F546F98B-5D4B-4B7C-8AFF-BB8E879695BF"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
-            landmarkName = "userNotificationCenter(_:willPresent:withCompletionHandler:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "44D36B61-7582-40AC-941B-D4A6DE564BBA"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "190"
-            endingLineNumber = "190"
-            landmarkName = "userNotificationCenter(_:didReceive:withCompletionHandler:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "44D36B61-7582-40AC-941B-D4A6DE564BBA - 276096bd9839c0ea"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse, withCompletionHandler: () -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "180"
-                  endingLineNumber = "180"
-                  offsetFromSymbolStart = "1280">
-               </Location>
-               <Location
-                  uuid = "44D36B61-7582-40AC-941B-D4A6DE564BBA - 276096bd9839c0cb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse, withCompletionHandler: () -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "181"
-                  endingLineNumber = "181"
-                  offsetFromSymbolStart = "1280">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E80D5B30-40EE-45C1-8F3B-D0F3AB86557B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "189"
-            endingLineNumber = "189"
-            landmarkName = "userNotificationCenter(_:didReceive:withCompletionHandler:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "E80D5B30-40EE-45C1-8F3B-D0F3AB86557B - 276096bd9839c089"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse, withCompletionHandler: () -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "179"
-                  endingLineNumber = "179"
-                  offsetFromSymbolStart = "1200">
-               </Location>
-               <Location
-                  uuid = "E80D5B30-40EE-45C1-8F3B-D0F3AB86557B - 276096bd9839c0ea"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse, withCompletionHandler: () -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "180"
-                  endingLineNumber = "180"
-                  offsetFromSymbolStart = "1200">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9698ADA8-6CCA-4AA2-9432-62FAC5752FFE"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
-            landmarkName = "userNotificationCenter(_:didReceive:withCompletionHandler:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "9698ADA8-6CCA-4AA2-9432-62FAC5752FFE - 276096bd9839c30d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse, withCompletionHandler: () -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "183"
-                  endingLineNumber = "183"
-                  offsetFromSymbolStart = "1472">
-               </Location>
-               <Location
-                  uuid = "9698ADA8-6CCA-4AA2-9432-62FAC5752FFE - 276096bd9839c36e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse, withCompletionHandler: () -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "184"
-                  endingLineNumber = "184"
-                  offsetFromSymbolStart = "1472">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "6B46BEA0-2400-493C-9D2D-16D2D38A1FFF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -1042,22 +33,6 @@
             startingLineNumber = "171"
             endingLineNumber = "171"
             landmarkName = "handleAction(withIdentifier:notification:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E0BEF122-CFD9-4DC5-BC0E-62A200C9B60A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
-            landmarkName = "userNotificationCenter(_:didReceive:withCompletionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1565,148 +540,6 @@
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5C2E8145-594A-4B6F-BC80-219797FAAE9B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/NotificationView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
-            landmarkName = "loadData(enrollment:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "5C2E8145-594A-4B6F-BC80-219797FAAE9B - f53d20e3995cc3ce"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationView.loadData() -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/NotificationView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "121"
-                  endingLineNumber = "121"
-                  offsetFromSymbolStart = "2396">
-               </Location>
-               <Location
-                  uuid = "5C2E8145-594A-4B6F-BC80-219797FAAE9B - f53d20e3995cc3ef"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationView.loadData() -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/NotificationView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "120"
-                  endingLineNumber = "120"
-                  offsetFromSymbolStart = "2396">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CD19D34F-DA46-4B0E-BF0B-313639BF1588"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/NotificationView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
-            landmarkName = "loadData(enrollment:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F1E72FE3-C3C4-4EF5-B3EE-48B643B6EB4F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/NotificationView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
-            landmarkName = "loadData(enrollment:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "F1E72FE3-C3C4-4EF5-B3EE-48B643B6EB4F - f53d20e3995cc088"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationView.loadData() -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/NotificationView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "115"
-                  endingLineNumber = "115"
-                  offsetFromSymbolStart = "640">
-               </Location>
-               <Location
-                  uuid = "F1E72FE3-C3C4-4EF5-B3EE-48B643B6EB4F - f53d20e3995cc088"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationView.loadData() -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/NotificationView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "115"
-                  endingLineNumber = "115"
-                  offsetFromSymbolStart = "1012">
-               </Location>
-               <Location
-                  uuid = "F1E72FE3-C3C4-4EF5-B3EE-48B643B6EB4F - f53d20e3995cc51d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationView.loadData() -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/NotificationView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "134"
-                  endingLineNumber = "134"
-                  offsetFromSymbolStart = "640">
-               </Location>
-               <Location
-                  uuid = "F1E72FE3-C3C4-4EF5-B3EE-48B643B6EB4F - f53d20e3995cc51d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationView.loadData() -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/NotificationView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "134"
-                  endingLineNumber = "134"
-                  offsetFromSymbolStart = "1012">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
          <BreakpointContent
             uuid = "317520C6-6814-419D-926B-D27B2F2AAA84"
@@ -1716,54 +549,6 @@
             symbolName = ""
             moduleName = "">
             <Locations>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E41AF039-274F-4CCE-B004-DC5A5ADE52F9"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
-            landmarkName = "userNotificationCenter(_:didReceive:withCompletionHandler:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "E41AF039-274F-4CCE-B004-DC5A5ADE52F9 - 276096bd9839c089"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse, withCompletionHandler: () -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "179"
-                  endingLineNumber = "179"
-                  offsetFromSymbolStart = "1036">
-               </Location>
-               <Location
-                  uuid = "E41AF039-274F-4CCE-B004-DC5A5ADE52F9 - 276096bd9839c089"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.NotificationCenter.userNotificationCenter(_: __C.UNUserNotificationCenter, didReceive: __C.UNNotificationResponse, withCompletionHandler: () -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/GuardianAppSwiftUIApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "179"
-                  endingLineNumber = "179"
-                  offsetFromSymbolStart = "1056">
-               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1957,148 +742,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FFC2F098-E2FB-4BEA-8DC8-C67024C220F4"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/ContentView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "processEnrollment(with:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B560187E-2D2E-4BB9-BDB9-4851C653078F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/ContentView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "processEnrollment(with:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "B560187E-2D2E-4BB9-BDB9-4851C653078F - 70e3224f3002ee1c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Guardian.Result&lt;Guardian.EnrolledDevice&gt;) -&gt; () in GuardianAppSwiftUI.ContentView.processEnrollment(with: Swift.String, completion: () -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "82"
-                  endingLineNumber = "82"
-                  offsetFromSymbolStart = "796">
-               </Location>
-               <Location
-                  uuid = "B560187E-2D2E-4BB9-BDB9-4851C653078F - 70e3224f3002ee1c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Guardian.Result&lt;Guardian.EnrolledDevice&gt;) -&gt; () in GuardianAppSwiftUI.ContentView.processEnrollment(with: Swift.String, completion: () -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "82"
-                  endingLineNumber = "82"
-                  offsetFromSymbolStart = "616">
-               </Location>
-               <Location
-                  uuid = "B560187E-2D2E-4BB9-BDB9-4851C653078F - 70e3224f3002ee1c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Guardian.Result&lt;Guardian.EnrolledDevice&gt;) -&gt; () in GuardianAppSwiftUI.ContentView.processEnrollment(with: Swift.String, completion: () -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "82"
-                  endingLineNumber = "82"
-                  offsetFromSymbolStart = "668">
-               </Location>
-               <Location
-                  uuid = "B560187E-2D2E-4BB9-BDB9-4851C653078F - 70e3224f3002ee3d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Guardian.Result&lt;Guardian.EnrolledDevice&gt;) -&gt; () in GuardianAppSwiftUI.ContentView.processEnrollment(with: Swift.String, completion: () -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "676">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "46196A3D-BA12-4F93-A1AE-EDAC59A4549D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/ContentView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "processEnrollment(with:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "46196A3D-BA12-4F93-A1AE-EDAC59A4549D - ffeb7f5293e9c659"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GuardianAppSwiftUI.ContentView.processEnrollment(with: Swift.String, completion: () -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "70"
-                  endingLineNumber = "70"
-                  offsetFromSymbolStart = "1144">
-               </Location>
-               <Location
-                  uuid = "46196A3D-BA12-4F93-A1AE-EDAC59A4549D - fd28a318232f4073"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Guardian.ResponseEvent) -&gt; () in GuardianAppSwiftUI.ContentView.processEnrollment(with: Swift.String, completion: () -&gt; ()) -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
-                  offsetFromSymbolStart = "136">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "3EA2C537-ACD5-485C-91A8-668E76DC6B0E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -2211,72 +854,8 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "790FCA3F-7DF0-437E-A15B-F8A590169B10"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/NotificationView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "790FCA3F-7DF0-437E-A15B-F8A590169B10 - df8fab30d3073745"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.shadow(color: SwiftUI.Color, radius: CoreGraphics.CGFloat, x: CoreGraphics.CGFloat, y: CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.edgesIgnoringSafeArea(SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.transition(SwiftUI.AnyTransition) -&gt; some&gt;&gt;.0&gt;)&gt; in GuardianAppSwiftUI.NotificationView.body.getter : some"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/NotificationView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "2436">
-               </Location>
-               <Location
-                  uuid = "790FCA3F-7DF0-437E-A15B-F8A590169B10 - 22bc3ebfd1c10885"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.edgesIgnoringSafeArea(SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.transition(SwiftUI.AnyTransition) -&gt; some&gt;&gt;.0&gt;)&gt; in GuardianAppSwiftUI.NotificationView.body.getter : some"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/NotificationView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "2436">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "353E0A3D-C2C4-4E06-8E50-EBF3F9A49D2D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/NotificationView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "83644951-4736-4624-A299-9A07DE76FB66"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuardianAppSwiftUI/EnrollmentRowView.swift"
@@ -2286,6 +865,309 @@
             endingLineNumber = "16"
             landmarkName = "EnrollmentRowView"
             landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "83644951-4736-4624-A299-9A07DE76FB66 - d13f78671531544f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of GuardianAppSwiftUI.EnrollmentRowView.countdown : Swift.Int"
+                  moduleName = "GuardianAppSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/EnrollmentRowView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "83644951-4736-4624-A299-9A07DE76FB66 - dc6cbd7dffd3ccca"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GuardianAppSwiftUI.EnrollmentRowView.init(enrollment: GuardianAppSwiftUI.GuardianState) -&gt; GuardianAppSwiftUI.EnrollmentRowView"
+                  moduleName = "GuardianAppSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/EnrollmentRowView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "380">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9033811C-CDFF-47DF-8503-8486D9E5CEB7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GuardianAppSwiftUI/State.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "loadAll()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "15731D97-8BFA-4443-8B3E-20CF6C19126C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GuardianAppSwiftUI/CircularProgressView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "90DBA8F4-4D1E-491C-9268-253B40C6C20A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GuardianAppSwiftUI/CircularProgressView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA9B7C80-13D6-44D5-9CA6-2133B11C7FE2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GuardianAppSwiftUI/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
+            landmarkName = "authenticateOnAppOpen()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9028CFAC-D709-4997-8101-3653BF0842E3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GuardianAppSwiftUI/NotificationView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "9028CFAC-D709-4997-8101-3653BF0842E3 - 61c0f3803f161f52"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #2 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.scaleEffect(_: CoreGraphics.CGFloat, anchor: SwiftUI.UnitPoint) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.scaleEffect(_: CoreGraphics.CGFloat, anchor: SwiftUI.UnitPoint) -&gt; some&gt;&gt;.0&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Group&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt;, SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, SwiftUI.Text, SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.alert(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, content: () -&gt; SwiftUI.Alert) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.edgesIgnoringSafeArea(SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.transition(SwiftUI.AnyTransition) -&gt; some&gt;&gt;.0&gt;)&gt; in GuardianAppSwiftUI.NotificationView.body.getter : some"
+                  moduleName = "GuardianAppSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/NotificationView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "9028CFAC-D709-4997-8101-3653BF0842E3 - 61c0f3803f161f52"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #2 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.scaleEffect(_: CoreGraphics.CGFloat, anchor: SwiftUI.UnitPoint) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.scaleEffect(_: CoreGraphics.CGFloat, anchor: SwiftUI.UnitPoint) -&gt; some&gt;&gt;.0&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Group&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt;&gt;, SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, SwiftUI.Text, SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.alert(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, content: () -&gt; SwiftUI.Alert) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.edgesIgnoringSafeArea(SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.transition(SwiftUI.AnyTransition) -&gt; some&gt;&gt;.0&gt;)&gt; in GuardianAppSwiftUI.NotificationView.body.getter : some"
+                  moduleName = "GuardianAppSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/NotificationView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "200">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BF788CE1-3FA4-46B3-8D35-E4DE8374812E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GuardianAppSwiftUI/NotificationView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "BF788CE1-3FA4-46B3-8D35-E4DE8374812E - 901d5a16d2f73ffd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, SwiftUI.Text, SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.alert(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, content: () -&gt; SwiftUI.Alert) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.edgesIgnoringSafeArea(SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.transition(SwiftUI.AnyTransition) -&gt; some&gt;&gt;.0&gt;)&gt; in GuardianAppSwiftUI.NotificationView.body.getter : some"
+                  moduleName = "GuardianAppSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/NotificationView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "110"
+                  endingLineNumber = "110"
+                  offsetFromSymbolStart = "3108">
+               </Location>
+               <Location
+                  uuid = "BF788CE1-3FA4-46B3-8D35-E4DE8374812E - 3603bc09eba13165"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; SwiftUI.Alert in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, SwiftUI.Text, SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.alert(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, content: () -&gt; SwiftUI.Alert) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.edgesIgnoringSafeArea(SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;&lt;&lt;opaque return type of SwiftUI.View.transition(SwiftUI.AnyTransition) -&gt; some&gt;&gt;.0&gt;)&gt; in GuardianAppSwiftUI.NotificationView.body.getter : some"
+                  moduleName = "GuardianAppSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/NotificationView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "BF788CE1-3FA4-46B3-8D35-E4DE8374812E - a40041171d08e2d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; SwiftUI.Alert in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Text, SwiftUI.Text, SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.alert(isPresented: SwiftUI.Binding&lt;Swift.Bool&gt;, content: () -&gt; SwiftUI.Alert) -&gt; some&gt;&gt;.0)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.edgesIgnoringSafeArea(SwiftUI.Edge.Set) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, Swift.Optional&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.zIndex(Swift.Double) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.zIndex(Swift.Double) -&gt; some&gt;&gt;.0)&gt;&gt;)&gt; in GuardianAppSwiftUI.NotificationView.body.getter : some"
+                  moduleName = "GuardianAppSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/NotificationView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "111"
+                  endingLineNumber = "111"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C986B1C7-6628-4193-9534-35B792B83506"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GuardianAppSwiftUI/NotificationView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "biometricPrompt"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "44D64278-5248-4C3A-993C-5762801FA870"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GuardianAppSwiftUI/NotificationView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "biometricPrompt"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "44D64278-5248-4C3A-993C-5762801FA870 - f053c2f916bc03f7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GuardianAppSwiftUI.NotificationView.biometricPrompt.getter : SwiftUI.Alert"
+                  moduleName = "GuardianAppSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/NotificationView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "159"
+                  endingLineNumber = "159"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  uuid = "44D64278-5248-4C3A-993C-5762801FA870 - 4858adaf972426cc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in GuardianAppSwiftUI.NotificationView.biometricPrompt.getter : SwiftUI.Alert"
+                  moduleName = "GuardianAppSwiftUI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/NotificationView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "160"
+                  endingLineNumber = "160"
+                  offsetFromSymbolStart = "248">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D182E7CE-813E-4EDE-B58C-C5B051D16452"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GuardianAppSwiftUI/NotificationView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "biometricPrompt"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D096DC65-1CE2-4765-AAB7-A6A2BC5B6A55"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GuardianAppSwiftUI/NotificationView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
+            landmarkName = "biometricPrompt"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

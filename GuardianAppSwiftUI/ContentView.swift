@@ -7,10 +7,18 @@
 
 import SwiftUI
 import Guardian
+import LocalAuthentication
+
 
 
 class EnrollmentListRefreshManager: ObservableObject {
     @Published var shouldRefresh = false
+}
+
+enum BiometricAuthenticationResult {
+    case none
+    case notAvailable
+    case failure
 }
 
 struct ContentView: View {
@@ -23,6 +31,8 @@ struct ContentView: View {
     @State private var messageForAlert:String = ""
     @State private var notEnrolled:Bool = false
     @StateObject private var refreshManager = EnrollmentListRefreshManager()
+    @State private var biometricAuthenticationResult: BiometricAuthenticationResult = .none
+
 
     var body: some View {
         ZStack {
@@ -45,6 +55,8 @@ struct ContentView: View {
                         }
                         .padding()
                         .foregroundColor(.blue)
+                    }.onAppear {
+                        authenticateOnAppOpen()
                     }
                     .sheet(isPresented: $isPresentingScanner) {
                         ScannerView() { result in
@@ -63,6 +75,27 @@ struct ContentView: View {
                     EnrollmentListView().environmentObject(refreshManager)
                 }
                 
+            }
+        }.alert(isPresented: $showAlert) {
+            switch biometricAuthenticationResult {
+            case .notAvailable:
+                return Alert(
+                    title: Text("Biometric Authentication Not Available"),
+                    message: Text("Biometric authentication is not supported or configured on this device."),
+                    dismissButton: .default(Text("OK"))
+                )
+            case .failure:
+                return Alert(
+                    title: Text("Biometric Authentication Failed"),
+                    message: Text("Biometric authentication failed. Please try again."),
+                    dismissButton: .default(Text("OK"))
+                )
+            default:
+                return Alert(
+                    title: Text("Alert"),
+                    message: Text(messageForAlert),
+                    dismissButton: .default(Text("OK"))
+                )
             }
         }
     }
@@ -119,6 +152,35 @@ struct ContentView: View {
         
         return (nil, nil)
     }
+    
+    func authenticateOnAppOpen() {
+            let context = LAContext()
+            var error: NSError?
+
+            // Check if biometric authentication is available
+            if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) {
+                // Biometric authentication is available, perform authentication
+                let reason = "Authenticate to access the app"
+                context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason) { success, error in
+                    DispatchQueue.main.async {
+                        if success {
+                            // Authentication successful, proceed with necessary actions
+                            // e.g., navigate to the main screen
+                            self.showAlert = false
+
+                        } else {
+                            // Authentication failed or canceled
+                            biometricAuthenticationResult = .failure
+                            self.showAlert = true
+                        }
+                    }
+                }
+            } else {
+                // Biometric authentication is not available or not configured
+                biometricAuthenticationResult = .notAvailable
+                self.showAlert = true
+            }
+        }
 
 }
 

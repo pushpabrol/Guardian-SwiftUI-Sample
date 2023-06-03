@@ -36,7 +36,7 @@ struct EnrollmentRowView: View {
                         }
                     }
                 Button(action: {
-                    UIPasteboard.general.string = totp
+                    UIPasteboard.general.string = totp.replacingOccurrences(of: " ", with: "")
                     isCopied = true
                     Timer.scheduledTimer(withTimeInterval: 3.0, repeats: false) { _ in
                         isCopied = false
