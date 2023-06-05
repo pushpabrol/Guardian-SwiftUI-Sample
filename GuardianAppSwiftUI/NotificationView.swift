@@ -27,13 +27,43 @@ struct NotificationView: View {
                 .edgesIgnoringSafeArea(.all)
 
             
-            VStack(spacing: 20) {
-                Text("Authentication Request").font(.headline)
-                Text("User: \(self.username)").font(.subheadline)
-                Text("Tenant: \(self.tenant)").font(.subheadline)
-                Spacer()
+            VStack(alignment: .leading, spacing: 20) {
+                HStack {
+                    
+                        Text("Authentication Request").font(.headline).padding(.horizontal,20).padding(.bottom,15)
+                        Spacer()
+                        Image("a0black")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 32, height: 32) // Adjust the size as needed
+                                    .padding(.horizontal)
+                }
+                    VStack(alignment: .leading, spacing: 10) {
+                        
+                        Text("User")
+                            .font(.headline).padding(.horizontal)
+                        Text(self.username)
+                            .font(.subheadline)
+                            .foregroundColor(.primary)
+                            .padding(.horizontal)
+                        
+                        Text("Tenant")
+                            .font(.headline)
+                            .padding(.horizontal)
+                        
+                        Text(tenant)
+                            .font(.subheadline)
+                            .foregroundColor(.primary)
+                            .padding(.horizontal)
+                        
+                    }.padding()
+            
+                   
+                
                 VStack(alignment: .leading, spacing: 10) {
                     Group {
+                        Text("Notification Details:")
+                            .font(.headline).padding(.horizontal).padding(.bottom,15)
                         Text("Browser")
                             .font(.headline)
                             .padding(.horizontal)
@@ -41,8 +71,6 @@ struct NotificationView: View {
                             .font(.subheadline)
                             .foregroundColor(.secondary)
                             .padding(.horizontal)
-                        
-                        
                         Text("Location")
                             .font(.headline)
                             .padding(.horizontal)
@@ -50,26 +78,24 @@ struct NotificationView: View {
                             .font(.subheadline)
                             .foregroundColor(.secondary)
                             .padding(.horizontal)
-                        
-                        Text("Requested At")
+                        Text("Recieved At")
                             .font(.headline)
                             .padding(.horizontal)
+                        
                         Text(dateLabel)
                             .font(.subheadline)
                             .foregroundColor(.secondary)
                             .padding(.horizontal)
+                            Text("Authorization Request")
+                                .font(.headline)
+                                .padding(.horizontal)
+                            Text("\(merchantName) is requesting a payment of \(paymentAmount) from your account: \(account)")
+                                .font(.subheadline)
+                                .foregroundColor(.secondary)
+                                .padding(.horizontal)
                         
-                        Text("Requested")
-                            .font(.headline)
-                            .padding(.horizontal)
-                        Text("\(merchantName) is requesting a payment of \(paymentAmount) from your account: \(account)")
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
-                            .padding(.horizontal)
                     }
-                    
                     Spacer()
-
                     HStack(spacing: 50) {
                         Button(action: {
                             guard isButtonEnabled else { return } // Check if the button is already disabled
@@ -136,13 +162,14 @@ struct NotificationView: View {
                                     .foregroundColor(.white)
                                     .cornerRadius(10)
                                     .transition(AnyTransition.opacity.animation(.easeInOut(duration: 2.0)))
-                                    .zIndex(1) // Ensure the text view is on top of other views
+                                    .zIndex(3) // Ensure the text view is on top of other views
                                     
                                 // Transparent overlay view to prevent taps on the underlying content
-                                Color.clear
-                                    .contentShape(Rectangle())
-                                    .onTapGesture {} // Ignore taps on the overlay
-                                    .zIndex(2) // Place the overlay above the text view
+                Color.clear
+                    .background(BlurView(style: .systemMaterial)) // Apply the blur effect
+                    .contentShape(Rectangle())
+                    .onTapGesture {} // Ignore taps on the overlay
+                    .zIndex(2) // Place the overlay above the text view
             }
         }
         
@@ -282,6 +309,20 @@ struct AuthorizationDetails: Codable { // or Decodable
     
 }
 
+
+struct BlurView: UIViewRepresentable {
+    var style: UIBlurEffect.Style
+
+    func makeUIView(context: Context) -> UIVisualEffectView {
+        let blurEffect = UIBlurEffect(style: style)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        return blurView
+    }
+
+    func updateUIView(_ uiView: UIVisualEffectView, context: Context) {
+        uiView.effect = UIBlurEffect(style: style)
+    }
+}
 
 
 

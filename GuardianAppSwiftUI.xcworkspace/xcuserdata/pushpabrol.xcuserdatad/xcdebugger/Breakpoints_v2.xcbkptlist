@@ -957,8 +957,8 @@
             filePath = "GuardianAppSwiftUI/NotificationView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -1005,8 +1005,8 @@
             filePath = "GuardianAppSwiftUI/NotificationView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -1068,8 +1068,8 @@
             filePath = "GuardianAppSwiftUI/NotificationView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "182"
+            endingLineNumber = "182"
             landmarkName = "biometricPrompt"
             landmarkType = "24">
          </BreakpointContent>
@@ -1084,8 +1084,8 @@
             filePath = "GuardianAppSwiftUI/NotificationView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "162"
-            endingLineNumber = "162"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
             landmarkName = "biometricPrompt"
             landmarkType = "24">
             <Locations>
@@ -1132,8 +1132,8 @@
             filePath = "GuardianAppSwiftUI/NotificationView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
             landmarkName = "biometricPrompt"
             landmarkType = "24">
          </BreakpointContent>
@@ -1148,8 +1148,8 @@
             filePath = "GuardianAppSwiftUI/NotificationView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "161"
-            endingLineNumber = "161"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
             landmarkName = "biometricPrompt"
             landmarkType = "24">
          </BreakpointContent>

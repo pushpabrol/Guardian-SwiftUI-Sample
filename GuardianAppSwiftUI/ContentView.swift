@@ -42,39 +42,44 @@ struct ContentView: View {
             }
             else {
                 VStack {
-                    Button(action: {
-                        self.isPresentingScanner = true
-                    }) {
-                        HStack {
-                            Image(systemName: "qrcode.viewfinder")
-                                .font(.title)
-                            Text("Scan QR Code to Enroll")
-                                .font(.headline)
-                            Spacer()
-                            Image("a0")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: 32, height: 32) // Adjust the size as needed
-                                        .padding(8)
-                        }
-                        .padding()
-                        .foregroundColor(.blue)
-                    }.onAppear {
-                        authenticateOnAppOpen()
-                    }
-                    .sheet(isPresented: $isPresentingScanner) {
-                        ScannerView() { result in
-                            if let result = result {
-                                self.processEnrollment(with: result, completion: {
-                                    self.isPresentingScanner = false
-                                    DispatchQueue.main.async {
-                                        self.refreshManager.shouldRefresh = true // Trigger refresh of EnrollmentListView
-                                    }
-                                    
-                                })
+                    HStack {
+
+                        Button(action: {
+                            self.isPresentingScanner = true
+                        }) {
+                            HStack {
+                                Image(systemName: "qrcode.viewfinder")
+                                    .font(.title)
+                                Text("Scan QR Code to Enroll")
+                                    .font(.headline)
+                                Spacer()
+                                
                             }
-                            
+                            .padding()
+                            .foregroundColor(.blue)
+                        }.onAppear {
+                            authenticateOnAppOpen()
                         }
+                        .sheet(isPresented: $isPresentingScanner) {
+                            ScannerView() { result in
+                                if let result = result {
+                                    self.processEnrollment(with: result, completion: {
+                                        self.isPresentingScanner = false
+                                        DispatchQueue.main.async {
+                                            self.refreshManager.shouldRefresh = true // Trigger refresh of EnrollmentListView
+                                        }
+                                        
+                                    })
+                                }
+                                
+                            }
+                        }
+                        Spacer()
+                        Image("a0black")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 32, height: 32) // Adjust the size as needed
+                                    .padding(.horizontal)
                     }
                     EnrollmentListView().environmentObject(refreshManager)
                 }

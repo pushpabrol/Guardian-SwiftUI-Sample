@@ -1,6 +1,6 @@
 # GuardianAppSwiftUI
 
-GuardianAppSwiftUI is a Swift app that utilizes SwiftUI and integrates with the Guardian authentication service using the Auth0 Guardian SDK. The app allows users to receive and handle Guardian authentication notifications, enroll using QR codes, view enrolled devices, and authenticate using biometric authentication.
+GuardianAppSwiftUI is a Swift app that utilizes SwiftUI and integrates with the Guardian authentication service using the Auth0 Guardian SDK. The app allows users to receive and handle Guardian authentication notifications, enroll using QR codes, view enrollments, and authenticate using biometric authentication.
 
 ## Prerequisites
 
@@ -47,7 +47,7 @@ To use this app with Auth0, you need to complete the following steps to configur
 
 5. The app processes the enrollment and saves the necessary information locally.
 
-6. Users can view the list of enrolled devices in the "Enrollments" section.
+6. Users can view the list of enrollments in the "Enrollments" section.
 
 7. Biometric authentication (e.g., Touch ID, Face ID) is used to authenticate the user when the app is opened.
 
@@ -57,13 +57,13 @@ To use this app with Auth0, you need to complete the following steps to configur
 
 10. The user can allow or deny the authentication request using biometric authentication.
 
-11. Enrolled devices can be managed in the "Enrollments" section.
+11. Enrollments can be viewed, deleted in the "Enrollments" section.
 
-12. Users can delete enrolled devices by swiping left on an enrollment and tapping the "Delete" button.
+12. Users can delete an enrollment by swiping left on an enrollment and tapping the "Delete" button.
 
 13. The "Enrollments" section is automatically refreshed when an enrollment is deleted or when the app is opened.
 
-14. In the "Enrollments" section, users can select an enrolled device to view additional details.
+14. In the "Enrollments" section, users can select an enrollment to view additional details.
 
 15. The details include the domain, user, enrollment ID, local identifier, and the dynamically generated Time-Based One-Time Password (TOTP).
 
@@ -73,7 +73,7 @@ To use this app with Auth0, you need to complete the following steps to configur
 
 18. The TOTP value is highlighted with a flashing color when the countdown reaches 5 seconds or less.
 
-19. Users can unenroll a device by tapping the "Unenroll" button, which removes the enrollment and triggers a refresh of the "Enrollments" section.
+19. Users can unenroll by tapping the "Unenroll" button, which removes the enrollment and triggers a refresh of the "Enrollments" section.
 
 ## Code Structure
 
@@ -82,7 +82,7 @@ The app consists of the following key components:
 - `ContentView`: The main view
 
  of the app, which displays the enrollment list and handles navigation.
-- `EnrollmentListView`: Displays the list of enrolled devices and allows users to delete enrollments.
+- `EnrollmentListView`: Displays the list of enrollments and allows users to delete enrollments.
 - `EnrollmentRowView`: Represents a single row in the enrollment list.
 - `EnrollmentView`: Displays the details of an enrollment, including the TOTP value and countdown timer.
 - `CircularProgressView`: Custom view for displaying a circular progress indicator with a countdown timer.
@@ -99,16 +99,14 @@ The code has been optimized in the following ways:
 - Leveraged Combine's `@StateObject` and `@EnvironmentObject` property wrappers to manage data flow and state changes.
 - Incorporated `Timer` and `onReceive` modifiers to update the TOTP value and countdown timer.
 - Created a `CircularProgressView` to display a circular progress indicator with a countdown timer.
-- Implemented `unenroll` methods to handle device unenrollment and refresh the enrollment list.
+- Implemented `unenroll` methods to handle unenrollment and refresh the enrollment list.
 
 ## Future Enhancements
 
 Here are some potential enhancements that can be made to the app:
 
-- Add support for different types of biometric authentication, such as Face ID and Touch ID.
 - Improve error handling and provide better feedback to the user in case of authentication or enrollment failures.
 - Implement localization for different languages to make the app accessible to a wider audience.
-- Add additional features, such as push notifications for enrollment status updates and transaction confirmations.
 
 ## License
 
