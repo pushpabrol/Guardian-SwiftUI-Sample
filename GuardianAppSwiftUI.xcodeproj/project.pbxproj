@@ -35,6 +35,7 @@
 		11088AF92A18FA9300F14628 /* GuardianAppSwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GuardianAppSwiftUI.entitlements; sourceTree = "<group>"; };
 		11088AFF2A1905F500F14628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		111E06212A2BA3BF005D7DB5 /* a0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = a0.png; path = ../../../a0.png; sourceTree = "<group>"; };
+		1149AFB72A2D690700A6FDFB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		115796F92A1B118C0000243A /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		115796FE2A1B17F70000243A /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		115797002A1BB8BA0000243A /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
@@ -99,6 +100,7 @@
 				116D83332A2988DA00E13E27 /* EnrollmentRowView.swift */,
 				116D83352A298AC200E13E27 /* OTPFunctions.swift */,
 				116D83372A298BDD00E13E27 /* CircularProgressView.swift */,
+				1149AFB72A2D690700A6FDFB /* README.md */,
 			);
 			path = GuardianAppSwiftUI;
 			sourceTree = "<group>";

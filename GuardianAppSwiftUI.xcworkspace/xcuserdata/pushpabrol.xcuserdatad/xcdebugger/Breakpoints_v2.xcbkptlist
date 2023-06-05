@@ -950,54 +950,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CA9B7C80-13D6-44D5-9CA6-2133B11C7FE2"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GuardianAppSwiftUI/ContentView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
-            landmarkName = "authenticateOnAppOpen()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "CA9B7C80-13D6-44D5-9CA6-2133B11C7FE2 - af2b29f09820d87f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in GuardianAppSwiftUI.ContentView.authenticateOnAppOpen() -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "173"
-                  endingLineNumber = "173"
-                  offsetFromSymbolStart = "152">
-               </Location>
-               <Location
-                  uuid = "CA9B7C80-13D6-44D5-9CA6-2133B11C7FE2 - af2b29f09820dbfb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in GuardianAppSwiftUI.ContentView.authenticateOnAppOpen() -&gt; ()"
-                  moduleName = "GuardianAppSwiftUI"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pushpabrol/iOsSamples/GuardianAppSwiftUI/GuardianAppSwiftUI/ContentView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "177"
-                  endingLineNumber = "177"
-                  offsetFromSymbolStart = "152">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "9028CFAC-D709-4997-8101-3653BF0842E3"
             shouldBeEnabled = "No"
             ignoreCount = "0"
