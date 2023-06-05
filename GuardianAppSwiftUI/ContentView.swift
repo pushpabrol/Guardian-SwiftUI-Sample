@@ -96,8 +96,12 @@ struct ContentView: View {
             case .failure:
                 return Alert(
                     title: Text("Biometric Authentication Failed"),
-                    message: Text("Biometric authentication failed. Please try again."),
-                    dismissButton: .default(Text("OK"))
+                    message: Text("Biometric or Passcode authentication failed. Please relaunch your app and try authenticating with your credentials"),
+                    dismissButton: .default(Text("OK")) {
+                                    // Code to run when the dismiss button is tapped
+                                    // Add your code here
+                                    exit(0)
+                                }
                 )
             default:
                 return Alert(
