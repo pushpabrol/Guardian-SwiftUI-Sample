@@ -67,6 +67,7 @@
 		11088AC32A186F8900F14628 = {
 			isa = PBXGroup;
 			children = (
+				1149AFB72A2D690700A6FDFB /* README.md */,
 				11088ACE2A186F8900F14628 /* GuardianAppSwiftUI */,
 				11088ACD2A186F8900F14628 /* Products */,
 				11088AE22A18719900F14628 /* Frameworks */,
@@ -100,7 +101,6 @@
 				116D83332A2988DA00E13E27 /* EnrollmentRowView.swift */,
 				116D83352A298AC200E13E27 /* OTPFunctions.swift */,
 				116D83372A298BDD00E13E27 /* CircularProgressView.swift */,
-				1149AFB72A2D690700A6FDFB /* README.md */,
 			);
 			path = GuardianAppSwiftUI;
 			sourceTree = "<group>";
