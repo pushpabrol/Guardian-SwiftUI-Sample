@@ -10,6 +10,7 @@ GuardianAppSwiftUI is a Swift app that utilizes SwiftUI and integrates with the 
 
 ## Auth0 Configuration
 
+
 To use this app with Auth0, you need to complete the following steps to configure push notifications for multi-factor authentication (MFA) using Guardian:
 
 1. Follow the steps outlined in the [Configure Push Notifications for Apple using APNs](https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-push-notifications-for-mfa#configure-push-notifications-for-apple-using-apns) guide in the Auth0 documentation.
@@ -38,7 +39,7 @@ To use this app with Auth0, you need to complete the following steps to configur
 
 ## Usage
 
-1. Launch the app on your device or simulator.
+1. Launch the app on your device. This will not work on the simulator as it requires notifications!
 
 2. Allow the app to send notifications when prompted.
 

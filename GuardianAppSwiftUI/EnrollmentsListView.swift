@@ -17,6 +17,7 @@ struct EnrollmentListView: View {
     private func loadData() {
         // Add your code to load enrollments here
         enrollments = GuardianState.loadAll()! // Replace with actual data
+ // Sample enrollment, can be uncommented for testing!
 //        let enrollment1 = GuardianState.init(identifier: "test", localIdentifier: "123123", token: "q223312323123", keyTag: "1231232312", otp: OTPParameters(base32Secret: "3SLSWZPQQBB7WBRYDAQZ5J77W5D7I6GU"),userEmail: "pushp.abrol@gmail.com", enrollmentTenantDomain: "sca-poc-cancun.guardian.us.auth0.com")
 //        enrollments.append(enrollment1)
         
