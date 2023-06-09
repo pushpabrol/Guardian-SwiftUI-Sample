@@ -6,6 +6,7 @@ GuardianAppSwiftUI is a Swift app that utilizes SwiftUI and integrates with the 
 
 - Xcode (version X or later)
 - iOS deployment target (version X or later)
+- CocoaPods & Guardian SDK pod for development ( I am using a modified version to handle showing transaction authorization!)
 
 ## Auth0 Configuration
 
@@ -48,32 +49,36 @@ To use this app with Auth0, you need to complete the following steps to configur
 5. The app processes the enrollment and saves the necessary information locally.
 
 6. Users can view the list of enrollments in the "Enrollments" section.
+<img src="./docs/enrollments.PNG" alt="enrollments" height="400"/>
 
-7. Biometric authentication (e.g., Touch ID, Face ID) is used to authenticate the user when the app is opened.
+1. Biometric authentication (e.g., Touch ID, Face ID) is used to authenticate the user when the app is opened.
 
-8. If biometric authentication is not available or fails, an alert is displayed.
+2. If biometric authentication is not available or fails, an alert is displayed.
 
-9. When an authentication request notification is received, the user is presented with an authentication view containing details about the request.
+3. When an authentication request notification is received, the user is presented with an authentication view containing details about the request.
+<img src="./docs/notification.PNG" alt="notification" height="400"/>
 
-10. The user can allow or deny the authentication request using biometric authentication.
+4.  The user can allow or deny the authentication request using biometric authentication.
 
-11. Enrollments can be viewed, deleted in the "Enrollments" section.
+5.  Enrollments can be viewed, deleted in the "Enrollments" section.
 
-12. Users can delete an enrollment by swiping left on an enrollment and tapping the "Delete" button.
+6.  Users can delete an enrollment by swiping left on an enrollment and tapping the "Delete" button.
 
-13. The "Enrollments" section is automatically refreshed when an enrollment is deleted or when the app is opened.
+7.  The "Enrollments" section is automatically refreshed when an enrollment is deleted or when the app is opened.
 
-14. In the "Enrollments" section, users can select an enrollment to view additional details.
+8.  In the "Enrollments" section, users can select an enrollment to view additional details.
+<img src="./docs/enrollment.PNG" alt="enrollment details" height="400"/>
 
-15. The details include the domain, user, enrollment ID, local identifier, and the dynamically generated Time-Based One-Time Password (TOTP).
 
-16. The TOTP value is automatically updated every 30 seconds and is displayed with a countdown timer.
+9.  The details include the domain, user, enrollment ID, local identifier, and the dynamically generated Time-Based One-Time Password (TOTP).
 
-17. Users can copy the TOTP value to the clipboard by tapping the copy button next to it.
+10. The TOTP value is automatically updated every 30 seconds and is displayed with a countdown timer.
 
-18. The TOTP value is highlighted with a flashing color when the countdown reaches 5 seconds or less.
+11. Users can copy the TOTP value to the clipboard by tapping the copy button next to it.
 
-19. Users can unenroll by tapping the "Unenroll" button, which removes the enrollment and triggers a refresh of the "Enrollments" section.
+12. The TOTP value is highlighted with a flashing color when the countdown reaches 5 seconds or less.
+
+13. Users can unenroll by tapping the "Unenroll" button, which removes the enrollment and triggers a refresh of the "Enrollments" section.
 
 ## Code Structure
 
@@ -90,18 +95,8 @@ The app consists of the following key components:
 - `NotificationView`: Displays the details of an authentication request notification and handles user actions.
 - `NotificationCenter`: An environment object used for managing authentication notifications.
 
-## Optimization
 
-The code has been optimized in the following ways:
-
-- Extracted common code into separate functions to improve code reusability and readability.
-- Utilized SwiftUI's built-in views and modifiers to simplify the layout and styling of views.
-- Leveraged Combine's `@StateObject` and `@EnvironmentObject` property wrappers to manage data flow and state changes.
-- Incorporated `Timer` and `onReceive` modifiers to update the TOTP value and countdown timer.
-- Created a `CircularProgressView` to display a circular progress indicator with a countdown timer.
-- Implemented `unenroll` methods to handle unenrollment and refresh the enrollment list.
-
-## Future Enhancements
+## TO DO
 
 Here are some potential enhancements that can be made to the app:
 

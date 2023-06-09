@@ -166,7 +166,7 @@ struct NotificationView: View {
                                     
                                 // Transparent overlay view to prevent taps on the underlying content
                 Color.clear
-                    .background(BlurView(style: .systemMaterial)) // Apply the blur effect
+                    .background(BlurView(style: .prominent)) // Apply the blur effect
                     .contentShape(Rectangle())
                     .onTapGesture {} // Ignore taps on the overlay
                     .zIndex(2) // Place the overlay above the text view
@@ -217,6 +217,7 @@ struct NotificationView: View {
         self.username = enrollment.userEmail
         self.tenant = enrollment.enrollmentTenantDomain
         
+        // This part of the code is custom to get the Authorization details
         if( notification.txlnkid != nil) {
             if let url = URL(string: "https://messagestore.desmaximus.com/api/message/".appending(notification.txlnkid!)) {
                 URLSession.shared.dataTask(with: url) { data, response, error in
