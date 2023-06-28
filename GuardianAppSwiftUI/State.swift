@@ -33,6 +33,7 @@ struct GuardianState: Codable {
     let otp: OTPParameters?
     let userEmail: String
     let enrollmentTenantDomain: String
+    var enrollmentPIN: String? = ""
 
     func save() throws {
         let encoder = JSONEncoder()

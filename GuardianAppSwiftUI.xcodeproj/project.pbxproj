@@ -21,6 +21,9 @@
 		116D83342A2988DA00E13E27 /* EnrollmentRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D83332A2988DA00E13E27 /* EnrollmentRowView.swift */; };
 		116D83362A298AC200E13E27 /* OTPFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D83352A298AC200E13E27 /* OTPFunctions.swift */; };
 		116D83382A298BDD00E13E27 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D83372A298BDD00E13E27 /* CircularProgressView.swift */; };
+		11764C3E2A4A3BA80074EC6D /* CreatePINView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11764C3D2A4A3BA80074EC6D /* CreatePINView.swift */; };
+		11764C402A4A47D90074EC6D /* PINVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11764C3F2A4A47D90074EC6D /* PINVerificationView.swift */; };
+		11764C432A4A566F0074EC6D /* PasscodeField in Frameworks */ = {isa = PBXBuildFile; productRef = 11764C422A4A566F0074EC6D /* PasscodeField */; };
 		11D8F2DB2A243E8B0092A4A4 /* EnrollmentsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D8F2DA2A243E8B0092A4A4 /* EnrollmentsListView.swift */; };
 		19BCCD36D9DA3FF5CFE03DA2 /* Pods_GuardianAppSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D65202F14266663019885C /* Pods_GuardianAppSwiftUI.framework */; };
 /* End PBXBuildFile section */
@@ -41,6 +44,8 @@
 		116D83332A2988DA00E13E27 /* EnrollmentRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentRowView.swift; sourceTree = "<group>"; };
 		116D83352A298AC200E13E27 /* OTPFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPFunctions.swift; sourceTree = "<group>"; };
 		116D83372A298BDD00E13E27 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		11764C3D2A4A3BA80074EC6D /* CreatePINView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePINView.swift; sourceTree = "<group>"; };
+		11764C3F2A4A47D90074EC6D /* PINVerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PINVerificationView.swift; sourceTree = "<group>"; };
 		11D8F2DA2A243E8B0092A4A4 /* EnrollmentsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentsListView.swift; sourceTree = "<group>"; };
 		C9342A2B32CF7D351B1DCA7C /* Pods-GuardianAppSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuardianAppSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-GuardianAppSwiftUI/Pods-GuardianAppSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		E8A744949FE3220F8E4911D7 /* Pods-GuardianAppSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GuardianAppSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-GuardianAppSwiftUI/Pods-GuardianAppSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
@@ -56,6 +61,7 @@
 				115797042A1BB9170000243A /* JWTDecode in Frameworks */,
 				19BCCD36D9DA3FF5CFE03DA2 /* Pods_GuardianAppSwiftUI.framework in Frameworks */,
 				115796FD2A1B11B50000243A /* SimpleKeychain in Frameworks */,
+				11764C432A4A566F0074EC6D /* PasscodeField in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +104,8 @@
 				116D83332A2988DA00E13E27 /* EnrollmentRowView.swift */,
 				116D83352A298AC200E13E27 /* OTPFunctions.swift */,
 				116D83372A298BDD00E13E27 /* CircularProgressView.swift */,
+				11764C3D2A4A3BA80074EC6D /* CreatePINView.swift */,
+				11764C3F2A4A47D90074EC6D /* PINVerificationView.swift */,
 			);
 			path = GuardianAppSwiftUI;
 			sourceTree = "<group>";
@@ -149,6 +157,7 @@
 				115796F72A1B0CE80000243A /* QRCodeReader */,
 				115796FC2A1B11B50000243A /* SimpleKeychain */,
 				115797032A1BB9170000243A /* JWTDecode */,
+				11764C422A4A566F0074EC6D /* PasscodeField */,
 			);
 			productName = GuardianAppSwiftUI;
 			productReference = 11088ACC2A186F8900F14628 /* GuardianAppSwiftUI.app */;
@@ -182,6 +191,7 @@
 				115796F62A1B0CE80000243A /* XCRemoteSwiftPackageReference "QRCodeReader.swift" */,
 				115796FB2A1B11B50000243A /* XCRemoteSwiftPackageReference "SimpleKeychain" */,
 				115797022A1BB9170000243A /* XCRemoteSwiftPackageReference "JWTDecode" */,
+				11764C412A4A566F0074EC6D /* XCRemoteSwiftPackageReference "PasscodeField" */,
 			);
 			productRefGroup = 11088ACD2A186F8900F14628 /* Products */;
 			projectDirPath = "";
@@ -252,6 +262,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				11088AD22A186F8900F14628 /* ContentView.swift in Sources */,
+				11764C402A4A47D90074EC6D /* PINVerificationView.swift in Sources */,
+				11764C3E2A4A3BA80074EC6D /* CreatePINView.swift in Sources */,
 				115796FF2A1B17F70000243A /* ScannerView.swift in Sources */,
 				11088AD02A186F8900F14628 /* GuardianAppSwiftUIApp.swift in Sources */,
 				115796FA2A1B118C0000243A /* State.swift in Sources */,
@@ -503,6 +515,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		11764C412A4A566F0074EC6D /* XCRemoteSwiftPackageReference "PasscodeField" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hengyu/PasscodeField.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -520,6 +540,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 115797022A1BB9170000243A /* XCRemoteSwiftPackageReference "JWTDecode" */;
 			productName = JWTDecode;
+		};
+		11764C422A4A566F0074EC6D /* PasscodeField */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11764C412A4A566F0074EC6D /* XCRemoteSwiftPackageReference "PasscodeField" */;
+			productName = PasscodeField;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

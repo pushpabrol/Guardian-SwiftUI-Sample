@@ -19,51 +19,54 @@ struct NotificationView: View {
     @State private var isButtonEnabled = true
     @State private var showAllowAlert = false
     @State private var timerAllow: Timer? = nil
-
+    @State private var requiresPINVerification: Bool = false
+    @State private var showPINVerification: Bool = false
+    @State private var pin: String = ""
 
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.05), Color.blue.opacity(0.15)]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
 
-            
             VStack(alignment: .leading, spacing: 20) {
                 HStack {
-                    
-                        Text("Authentication Request").font(.headline).padding(.horizontal,20).padding(.bottom,15)
-                        Spacer()
-                        Image("a0black")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 32, height: 32) // Adjust the size as needed
-                                    .padding(.horizontal)
+                    Text("Authentication Request")
+                        .font(.headline)
+                        .padding(.horizontal, 20)
+                        .padding(.bottom, 15)
+                    Spacer()
+                    Image("a0black")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 32, height: 32)
+                        .padding(.horizontal)
                 }
-                    VStack(alignment: .leading, spacing: 10) {
-                        
-                        Text("User")
-                            .font(.headline).padding(.horizontal)
-                        Text(self.username)
-                            .font(.subheadline)
-                            .foregroundColor(.primary)
-                            .padding(.horizontal)
-                        
-                        Text("Tenant")
-                            .font(.headline)
-                            .padding(.horizontal)
-                        
-                        Text(tenant)
-                            .font(.subheadline)
-                            .foregroundColor(.primary)
-                            .padding(.horizontal)
-                        
-                    }.padding()
-            
-                   
-                
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("User")
+                        .font(.headline)
+                        .padding(.horizontal)
+                    Text(self.username)
+                        .font(.subheadline)
+                        .foregroundColor(.primary)
+                        .padding(.horizontal)
+
+                    Text("Tenant")
+                        .font(.headline)
+                        .padding(.horizontal)
+
+                    Text(tenant)
+                        .font(.subheadline)
+                        .foregroundColor(.primary)
+                        .padding(.horizontal)
+                }
+                .padding()
+
                 VStack(alignment: .leading, spacing: 10) {
                     Group {
                         Text("Notification Details:")
-                            .font(.headline).padding(.horizontal).padding(.bottom,15)
+                            .font(.headline)
+                            .padding(.horizontal)
+                            .padding(.bottom, 15)
                         Text("Browser")
                             .font(.headline)
                             .padding(.horizontal)
@@ -78,30 +81,34 @@ struct NotificationView: View {
                             .font(.subheadline)
                             .foregroundColor(.secondary)
                             .padding(.horizontal)
-                        Text("Recieved At")
+                        Text("Received At")
                             .font(.headline)
                             .padding(.horizontal)
-                        
+
                         Text(dateLabel)
                             .font(.subheadline)
                             .foregroundColor(.secondary)
                             .padding(.horizontal)
-                            Text("Authorization Request")
-                                .font(.headline)
-                                .padding(.horizontal)
-                            Text("\(merchantName) is requesting a payment of \(paymentAmount) from your account: \(account)")
-                                .font(.subheadline)
-                                .foregroundColor(.secondary)
-                                .padding(.horizontal)
-                        
+                        Text("Authorization Request")
+                            .font(.headline)
+                            .padding(.horizontal)
+                        Text("\(merchantName) is requesting a payment of \(paymentAmount) from your account: \(account)")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                            .padding(.horizontal)
                     }
                     Spacer()
                     HStack(spacing: 50) {
                         Button(action: {
                             guard isButtonEnabled else { return } // Check if the button is already disabled
                             isButtonEnabled = false // Disable the button
-                            self.showBiometricPrompt = true
-                            
+                            if(!self.requiresPINVerification) {
+                                self.showBiometricPrompt = true
+                                self.showPINVerification = false
+                            }
+                            else  {
+                                self.showPINVerification = true
+                            }
                         }) {
                             Text("Allow")
                                 .font(.headline)
@@ -110,11 +117,11 @@ struct NotificationView: View {
                                 .background(Color.blue)
                                 .foregroundColor(.white)
                                 .cornerRadius(10)
-                        }.disabled(!isButtonEnabled)
+                        }
+                        .disabled(!isButtonEnabled)
 
                         Button(action: {
                             self.denyAction(enrollment: GuardianState.loadByEnrollmentId(by: notificationCenter.authenticationNotification!.enrollmentId))
-                            
                         }) {
                             Text("Deny")
                                 .font(.headline)
@@ -126,7 +133,6 @@ struct NotificationView: View {
                         }
                     }
                     .padding(.horizontal)
-
                 }
                 .padding()
                 .background()
@@ -134,79 +140,97 @@ struct NotificationView: View {
                 .border(.secondary)
                 .shadow(radius: 10)
                 .alert(isPresented: $showBiometricPrompt) {
-                            biometricPrompt
-                            
-                        }
-            }
-            .padding()
-            .onAppear {
-                if(notificationCenter.authenticationNotification != nil)
-                {
-                    self.loadData(enrollment: GuardianState.loadByEnrollmentId(by: notificationCenter.authenticationNotification!.enrollmentId))
-                }
-                else {
-                    dateLabel = Date().formatted(date: .abbreviated, time: Date.FormatStyle.TimeStyle.standard)
-                    merchantName = "blah"
-                    paymentAmount = "100"
-                    username = "pushp.abrol@gmail.com"
-                    account = "10000aedafd"
-                    tenant = "auth0.com"
-                }
+                                    biometricPrompt
+                                }
+ 
             }
 
             if showAllowAlert {
                 Text("Access Granted. Continue at \(self.merchantName) to complete your transaction!")
-                                    .font(.title)
-                                    .padding()
-                                    .background(Color.black.opacity(0.7))
-                                    .foregroundColor(.white)
-                                    .cornerRadius(10)
-                                    .transition(AnyTransition.opacity.animation(.easeInOut(duration: 2.0)))
-                                    .zIndex(3) // Ensure the text view is on top of other views
-                                    
-                                // Transparent overlay view to prevent taps on the underlying content
+                    .font(.title)
+                    .padding()
+                    .background(Color.black.opacity(0.7))
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+                    .transition(AnyTransition.opacity.animation(.easeInOut(duration: 2.0)))
+                    .zIndex(3)
+
                 Color.clear
-                    .background(BlurView(style: .prominent)) // Apply the blur effect
+                    .background(BlurView(style: .prominent))
                     .contentShape(Rectangle())
-                    .onTapGesture {} // Ignore taps on the overlay
-                    .zIndex(2) // Place the overlay above the text view
+                    .onTapGesture {}
+                    .zIndex(2)
+            }
+        }
+        .onAppear {
+            if notificationCenter.authenticationNotification != nil {
+                self.loadData(enrollment: GuardianState.loadByEnrollmentId(by: notificationCenter.authenticationNotification!.enrollmentId))
+            } else {
+                dateLabel = Date().formatted(date: .abbreviated, time: Date.FormatStyle.TimeStyle.standard)
+                merchantName = "blah"
+                paymentAmount = "100"
+                username = "pushp.abrol@gmail.com"
+                account = "10000aedafd"
+                tenant = "auth0.com"
+            }
+        }
+        .sheet(isPresented: $showPINVerification, onDismiss: {
+            isButtonEnabled = true
+        }) {
+            PINVerificationView(pin: $pin, enrollment: GuardianState.loadByEnrollmentId(by: notificationCenter.authenticationNotification!.enrollmentId)!) { isPINVerified  in
+                if isPINVerified {
+                    self.allowAction(enrollment: GuardianState.loadByEnrollmentId(by: notificationCenter.authenticationNotification!.enrollmentId))
+                    self.showAllowAlert = true
+
+                    self.timerAllow?.invalidate()
+                    self.timerAllow = Timer.scheduledTimer(withTimeInterval: 4.0, repeats: false) { _ in
+                        self.showAllowAlert = false
+                        notificationCenter.authenticationNotification = nil
+                        self.requiresPINVerification = false
+                        self.showPINVerification = false
+                    }
+                } else {
+                    // Handle incorrect PIN
+                    // For example, show an error message
+                    print("Incorrect PIN")
+                }
             }
         }
         
     }
 
     private var biometricPrompt: Alert {
-            let context = LAContext()
-            var error: NSError?
-            
-            guard context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) else {
-                authenticationError = error
-                showBiometricPrompt = false
-                isButtonEnabled = true
-                return Alert(title: Text("Error"), message: Text(error?.localizedDescription ?? "Failed to evaluate biometric policy."), dismissButton: .default(Text("OK")))
-            }
-            
-            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: "Authenticate to allow the action") { success, error in
-                DispatchQueue.main.async {
-                    if success {
-                        self.allowAction(enrollment: GuardianState.loadByEnrollmentId(by: notificationCenter.authenticationNotification!.enrollmentId))
-                        self.showAllowAlert = true
+        let context = LAContext()
+        var error: NSError?
 
-                        self.timerAllow?.invalidate()
-                        self.timerAllow = Timer.scheduledTimer(withTimeInterval: 4.0, repeats: false) { _ in
-                            self.showAllowAlert = false
-                            notificationCenter.authenticationNotification = nil
-                        }
-                    } else if let error = error {
-                        self.authenticationError = error
-                    }
-                    self.showBiometricPrompt = false
-                }
-            }
-            
-        return Alert(title: Text("Biometric Authentication"), message: Text("Authenticate to allow the action"), dismissButton: .default(Text("Cancel")))
+        guard context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) else {
+            authenticationError = error
+            showBiometricPrompt = false
+            isButtonEnabled = true
+            return Alert(title: Text("Error"), message: Text(error?.localizedDescription ?? "Failed to evaluate biometric policy."), dismissButton: .default(Text("OK")))
         }
-    
+
+        context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: "Authenticate to allow the action") { success, error in
+            DispatchQueue.main.async {
+                if success {
+                    self.allowAction(enrollment: GuardianState.loadByEnrollmentId(by: notificationCenter.authenticationNotification!.enrollmentId))
+                    self.showAllowAlert = true
+
+                    self.timerAllow?.invalidate()
+                    self.timerAllow = Timer.scheduledTimer(withTimeInterval: 4.0, repeats: false) { _ in
+                        self.showAllowAlert = false
+                        notificationCenter.authenticationNotification = nil
+                    }
+                } else if let error = error {
+                    self.authenticationError = error
+                }
+                self.showBiometricPrompt = false
+            }
+        }
+
+        return Alert(title: Text("Biometric Authentication"), message: Text("Authenticate to allow the action"), dismissButton: .default(Text("Cancel")))
+    }
+
     func loadData(enrollment: GuardianState?) {
         guard let notification = notificationCenter.authenticationNotification, let enrollment = enrollment else {
             return
@@ -216,9 +240,9 @@ struct NotificationView: View {
         dateLabel = "\(notification.startedAt.formatted(date: .abbreviated, time: Date.FormatStyle.TimeStyle.standard))"
         self.username = enrollment.userEmail
         self.tenant = enrollment.enrollmentTenantDomain
-        
+
         // This part of the code is custom to get the Authorization details
-        if( notification.txlnkid != nil) {
+        if notification.txlnkid != nil {
             if let url = URL(string: "https://messagestore.desmaximus.com/api/message/".appending(notification.txlnkid!)) {
                 URLSession.shared.dataTask(with: url) { data, response, error in
                     if let data = data {
@@ -230,12 +254,11 @@ struct NotificationView: View {
                                 self.merchantName = res.creditorName
                                 self.paymentAmount = "\(res.transaction_amount)".appending(" USD")
                                 self.account = res.account
-                               
+                                self.requiresPINVerification = !(enrollment.enrollmentPIN ?? "").isEmpty
                             }
                         } catch let error {
                             print(error)
                         }
-                        
                     }
                 }.resume()
             }
@@ -252,14 +275,13 @@ struct NotificationView: View {
             .allow(notification: notification)
         debugPrint(request)
         request.start { result in
-                print(result)
-                switch result {
-                case .success:
-                    print("Allow Success")
-                        
-                case .failure(let cause):
-                    print("Allow failed \(cause)")
-                }
+            print(result)
+            switch result {
+            case .success:
+                print("Allow Success")
+            case .failure(let cause):
+                print("Allow failed \(cause)")
+            }
         }
     }
 
@@ -270,46 +292,37 @@ struct NotificationView: View {
         }
         let request = Guardian
             .authentication(forDomain: enrollment.enrollmentTenantDomain, device: enrollment)
-            .reject(notification: notification, withReason: "User rejected the notifiation!")
+            .reject(notification: notification, withReason: "User rejected the notification!")
         debugPrint(request)
         request.start { result in
-                print(result)
-                switch result {
-                case .success:
-                    print("User rejected the request!")
-                    DispatchQueue.main.async {
-                        notificationCenter.authenticationNotification = nil
-                    }
-                case .failure(let cause):
-                    print("Reject failed \(cause)")
+            print(result)
+            switch result {
+            case .success:
+                print("User rejected the request!")
+                DispatchQueue.main.async {
+                    notificationCenter.authenticationNotification = nil
                 }
+            case .failure(let cause):
+                print("Reject failed \(cause)")
+            }
         }
     }
 }
 
 struct NotificationView_Previews: PreviewProvider {
-    
     static var previews: some View {
-        
-        NotificationView().environmentObject({ () -> NotificationCenter in
-            let envObj = NotificationCenter.init()
-                           return envObj
-                       }() )
-
+        NotificationView()
+            .environmentObject(NotificationCenter())
     }
 }
 
-
-
-struct AuthorizationDetails: Codable { // or Decodable
-  let account: String
-  let creditorName: String
-  let transaction_amount: Int
-  let transaction_id: String
-  let type: String
-    
+struct AuthorizationDetails: Codable {
+    let account: String
+    let creditorName: String
+    let transaction_amount: Int
+    let transaction_id: String
+    let type: String
 }
-
 
 struct BlurView: UIViewRepresentable {
     var style: UIBlurEffect.Style
@@ -324,8 +337,4 @@ struct BlurView: UIViewRepresentable {
         uiView.effect = UIBlurEffect(style: style)
     }
 }
-
-
-
-
 

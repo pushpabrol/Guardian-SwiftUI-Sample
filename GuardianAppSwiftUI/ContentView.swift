@@ -10,7 +10,6 @@ import Guardian
 import LocalAuthentication
 
 
-
 class EnrollmentListRefreshManager: ObservableObject {
     @Published var shouldRefresh = false
 }
@@ -28,10 +27,11 @@ struct ContentView: View {
     @State private var isSheetPresented = false
     @State private var isPresentingScanner = false
     @State private var showAlert: Bool = false
-    @State private var messageForAlert:String = ""
-    @State private var notEnrolled:Bool = false
+    @State private var messageForAlert: String = ""
+    @State private var notEnrolled: Bool = false
     @StateObject private var refreshManager = EnrollmentListRefreshManager()
     @State private var biometricAuthenticationResult: BiometricAuthenticationResult = .none
+    @State private var enrollment: GuardianState? = nil // Store the enrollment for CreatePINView
 
     var body: some View {
         ZStack(alignment: .topTrailing) {
@@ -39,11 +39,9 @@ struct ContentView: View {
                 .edgesIgnoringSafeArea(.all)
             if notificationCenter.authenticationNotification != nil {
                 NotificationView().environmentObject(notificationCenter)
-            }
-            else {
+            } else {
                 VStack {
                     HStack {
-
                         Button(action: {
                             self.isPresentingScanner = true
                         }) {
@@ -53,7 +51,6 @@ struct ContentView: View {
                                 Text("Scan QR Code to Enroll")
                                     .font(.headline)
                                 Spacer()
-                                
                             }
                             .padding()
                             .foregroundColor(.blue)
@@ -68,22 +65,19 @@ struct ContentView: View {
                                         DispatchQueue.main.async {
                                             self.refreshManager.shouldRefresh = true // Trigger refresh of EnrollmentListView
                                         }
-                                        
                                     })
                                 }
-                                
                             }
                         }
                         Spacer()
                         Image("a0black")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 32, height: 32) // Adjust the size as needed
-                                    .padding(.horizontal)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 32, height: 32) // Adjust the size as needed
+                            .padding(.horizontal)
                     }
                     EnrollmentListView().environmentObject(refreshManager)
                 }
-                
             }
         }.alert(isPresented: $showAlert) {
             switch biometricAuthenticationResult {
@@ -98,10 +92,10 @@ struct ContentView: View {
                     title: Text("Biometric Authentication Failed"),
                     message: Text("Biometric or Passcode authentication failed. Please relaunch your app and try authenticating with your credentials"),
                     dismissButton: .default(Text("OK")) {
-                                    // Code to run when the dismiss button is tapped
-                                    // Add your code here
-                                    exit(0)
-                                }
+                        // Code to run when the dismiss button is tapped
+                        // Add your code here
+                        exit(0)
+                    }
                 )
             default:
                 return Alert(
@@ -111,16 +105,25 @@ struct ContentView: View {
                 )
             }
         }
+        .sheet(isPresented: $isSheetPresented) {
+            if let enrollment = enrollment {
+                CreatePINView(enrollment: enrollment)
+                    .environmentObject(refreshManager)
+                    .onDisappear {
+                        refreshManager.shouldRefresh = true // Trigger refresh of ContentView
+                    }
+            }
+        }
     }
-    
+
     func processEnrollment(with string: String, completion: @escaping () -> Void) {
         let barCodeUri = string
         print(barCodeUri)
-        let datafromUrl = extractEmailAndDomain(from: barCodeUri);
-        
+        let datafromUrl = extractEmailAndDomain(from: barCodeUri)
+
         guard let signingKey = try? KeychainRSAPrivateKey.new(with: ContentView.RSA_KEY_PRIVATE_TAG),
-            let verificationKey = try? signingKey.verificationKey() else {
-                return
+              let verificationKey = try? signingKey.verificationKey() else {
+            return
         }
 
         let request = Guardian.enroll(forDomain: datafromUrl.domain!, usingUri: barCodeUri, notificationToken: AppDelegate.pushToken!, signingKey: signingKey, verificationKey: verificationKey)
@@ -137,13 +140,17 @@ struct ContentView: View {
                     print("\(cause)")
                     completion()
                 case .success(let enrollment):
-                    let enrollment = GuardianState(identifier: enrollment.id, localIdentifier: enrollment.localIdentifier, token: enrollment.deviceToken, keyTag: signingKey.tag, otp: enrollment.totp, userEmail: datafromUrl.email ?? "", enrollmentTenantDomain: datafromUrl.domain!)
+                    let enrollment = GuardianState(identifier: enrollment.id, localIdentifier: enrollment.localIdentifier, token: enrollment.deviceToken, keyTag: signingKey.tag, otp: enrollment.totp, userEmail: datafromUrl.email ?? "", enrollmentTenantDomain: datafromUrl.domain!, enrollmentPIN: "")
                     AppDelegate.saveEnrollmentById(enrollment: enrollment)
+                    DispatchQueue.main.async {
+                        self.enrollment = enrollment // Store the enrollment for CreatePINView
+                        self.isSheetPresented = true // Present the CreatePINView sheet
+                    }
                     completion()
                 }
             }
     }
-    
+
     func extractEmailAndDomain(from urlString: String) -> (email: String?, domain: String?) {
         let percentEncodingRemoved = urlString.removingPercentEncoding!
         let pattern = "otpauth://totp/.+?:(.+?)\\?enrollment_tx_id=.+?&base_url=https?://([^/]+).*"
@@ -152,51 +159,48 @@ struct ContentView: View {
         guard let match = regex.firstMatch(in: percentEncodingRemoved, options: [], range: range) else {
             return (nil, nil)
         }
-        
+
         let emailRange = match.range(at: 1)
         let domainRange = match.range(at: 2)
-        
+
         if let emailRange = Range(emailRange, in: percentEncodingRemoved),
            let domainRange = Range(domainRange, in: percentEncodingRemoved) {
             let email = String(percentEncodingRemoved[emailRange]).removingPercentEncoding
             let domain = String(percentEncodingRemoved[domainRange])
             return (email, domain)
         }
-        
+
         return (nil, nil)
     }
-    
+
     func authenticateOnAppOpen() {
-            let context = LAContext()
-            var error: NSError?
+        let context = LAContext()
+        var error: NSError?
 
-            // Check if biometric authentication is available
-            if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) {
-                // Biometric authentication is available, perform authentication
-                let reason = "Authenticate to access the app"
-                context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason) { success, error in
-                    DispatchQueue.main.async {
-                        if success {
-                            // Authentication successful, proceed with necessary actions
-                            // e.g., navigate to the main screen
-                            self.showAlert = false
-
-                        } else {
-                            // Authentication failed or canceled
-                            biometricAuthenticationResult = .failure
-                            self.showAlert = true
-                        }
+        // Check if biometric authentication is available
+        if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) {
+            // Biometric authentication is available, perform authentication
+            let reason = "Authenticate to access the app"
+            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason) { success, error in
+                DispatchQueue.main.async {
+                    if success {
+                        // Authentication successful, proceed with necessary actions
+                        // e.g., navigate to the main screen
+                        self.showAlert = false
+                    } else {
+                        // Authentication failed or canceled
+                        biometricAuthenticationResult = .failure
+                        self.showAlert = true
                     }
                 }
-            } else {
-                // Biometric authentication is not available or not configured
-                biometricAuthenticationResult = .notAvailable
-                self.showAlert = true
             }
+        } else {
+            // Biometric authentication is not available or not configured
+            biometricAuthenticationResult = .notAvailable
+            self.showAlert = true
         }
-
+    }
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
@@ -208,14 +212,13 @@ struct ContentView_Previews: PreviewProvider {
 
 
 class OTPCredential {
-
     @objc dynamic var algorithmName: String = "sha1"
     @objc dynamic var digits: Int = 6
     @objc dynamic var counter: Int = 0
     @objc dynamic var period: Int = 30
     @objc dynamic var base32Secret: String = ""
     @objc dynamic var otpType: String = "totp"
-
     @objc dynamic var createdAt: Date = Date(timeIntervalSince1970: 1)
     @objc dynamic var updatedAt: Date? = nil
 }
+

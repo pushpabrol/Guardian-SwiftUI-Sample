@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "passcodefield",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hengyu/PasscodeField.git",
+      "state" : {
+        "revision" : "2e3495fbb8b759229ddb929b7ad851224db95782",
+        "version" : "1.0.0"
+      }
+    },
+    {
       "identity" : "qrcodereader.swift",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/yannickl/QRCodeReader.swift.git",
