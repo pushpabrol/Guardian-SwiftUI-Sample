@@ -186,10 +186,10 @@
 			);
 			mainGroup = 11088AC32A186F8900F14628;
 			packageReferences = (
-				115796F62A1B0CE80000243A /* XCRemoteSwiftPackageReference "QRCodeReader.swift" */,
-				115796FB2A1B11B50000243A /* XCRemoteSwiftPackageReference "SimpleKeychain" */,
-				115797022A1BB9170000243A /* XCRemoteSwiftPackageReference "JWTDecode" */,
-				11764C412A4A566F0074EC6D /* XCRemoteSwiftPackageReference "PasscodeField" */,
+				115796F62A1B0CE80000243A /* XCRemoteSwiftPackageReference "QRCodeReader.swift.git" */,
+				115796FB2A1B11B50000243A /* XCRemoteSwiftPackageReference "SimpleKeychain.git" */,
+				115797022A1BB9170000243A /* XCRemoteSwiftPackageReference "JWTDecode.swift" */,
+				11764C412A4A566F0074EC6D /* XCRemoteSwiftPackageReference "PasscodeField.git" */,
 			);
 			productRefGroup = 11088ACD2A186F8900F14628 /* Products */;
 			projectDirPath = "";
@@ -220,9 +220,11 @@
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GuardianAppSwiftUI/Pods-GuardianAppSwiftUI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GuardianAppSwiftUI/Pods-GuardianAppSwiftUI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -488,7 +490,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		115796F62A1B0CE80000243A /* XCRemoteSwiftPackageReference "QRCodeReader.swift" */ = {
+		115796F62A1B0CE80000243A /* XCRemoteSwiftPackageReference "QRCodeReader.swift.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/yannickl/QRCodeReader.swift.git";
 			requirement = {
@@ -496,7 +498,7 @@
 				minimumVersion = 10.0.0;
 			};
 		};
-		115796FB2A1B11B50000243A /* XCRemoteSwiftPackageReference "SimpleKeychain" */ = {
+		115796FB2A1B11B50000243A /* XCRemoteSwiftPackageReference "SimpleKeychain.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/auth0/SimpleKeychain.git";
 			requirement = {
@@ -504,7 +506,7 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		115797022A1BB9170000243A /* XCRemoteSwiftPackageReference "JWTDecode" */ = {
+		115797022A1BB9170000243A /* XCRemoteSwiftPackageReference "JWTDecode.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/auth0/JWTDecode.swift";
 			requirement = {
@@ -512,7 +514,7 @@
 				minimumVersion = 3.0.0;
 			};
 		};
-		11764C412A4A566F0074EC6D /* XCRemoteSwiftPackageReference "PasscodeField" */ = {
+		11764C412A4A566F0074EC6D /* XCRemoteSwiftPackageReference "PasscodeField.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hengyu/PasscodeField.git";
 			requirement = {
@@ -525,22 +527,22 @@
 /* Begin XCSwiftPackageProductDependency section */
 		115796F72A1B0CE80000243A /* QRCodeReader */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 115796F62A1B0CE80000243A /* XCRemoteSwiftPackageReference "QRCodeReader.swift" */;
+			package = 115796F62A1B0CE80000243A /* XCRemoteSwiftPackageReference "QRCodeReader.swift.git" */;
 			productName = QRCodeReader;
 		};
 		115796FC2A1B11B50000243A /* SimpleKeychain */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 115796FB2A1B11B50000243A /* XCRemoteSwiftPackageReference "SimpleKeychain" */;
+			package = 115796FB2A1B11B50000243A /* XCRemoteSwiftPackageReference "SimpleKeychain.git" */;
 			productName = SimpleKeychain;
 		};
 		115797032A1BB9170000243A /* JWTDecode */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 115797022A1BB9170000243A /* XCRemoteSwiftPackageReference "JWTDecode" */;
+			package = 115797022A1BB9170000243A /* XCRemoteSwiftPackageReference "JWTDecode.swift" */;
 			productName = JWTDecode;
 		};
 		11764C422A4A566F0074EC6D /* PasscodeField */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 11764C412A4A566F0074EC6D /* XCRemoteSwiftPackageReference "PasscodeField" */;
+			package = 11764C412A4A566F0074EC6D /* XCRemoteSwiftPackageReference "PasscodeField.git" */;
 			productName = PasscodeField;
 		};
 /* End XCSwiftPackageProductDependency section */
