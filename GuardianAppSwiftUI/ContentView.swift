@@ -120,7 +120,7 @@ struct ContentView: View {
         let barCodeUri = string
         print(barCodeUri)
         let datafromUrl = extractEmailAndDomain(from: barCodeUri)
-
+        debugPrint(datafromUrl)
         guard let signingKey = try? KeychainRSAPrivateKey.new(with: ContentView.RSA_KEY_PRIVATE_TAG),
               let verificationKey = try? signingKey.verificationKey() else {
             return
@@ -153,7 +153,10 @@ struct ContentView: View {
 
     func extractEmailAndDomain(from urlString: String) -> (email: String?, domain: String?) {
         let percentEncodingRemoved = urlString.removingPercentEncoding!
-        let pattern = "otpauth://totp/.+?:(.+?)\\?enrollment_tx_id=.+?&base_url=https?://([^/]+).*"
+        
+        print(percentEncodingRemoved);
+        //let pattern = "otpauth://totp/.+?:(.+?)\\?enrollment_tx_id=.+?&base_url=https?://([^/]+).*"
+        let pattern = "otpauth://totp/.+?:(.+?)\\?enrollment_tx_id=.+?&base_url=https?://([^$]+).*"
         let regex = try! NSRegularExpression(pattern: pattern, options: [])
         let range = NSRange(location: 0, length: percentEncodingRemoved.count)
         guard let match = regex.firstMatch(in: percentEncodingRemoved, options: [], range: range) else {
@@ -162,11 +165,14 @@ struct ContentView: View {
 
         let emailRange = match.range(at: 1)
         let domainRange = match.range(at: 2)
+        
 
         if let emailRange = Range(emailRange, in: percentEncodingRemoved),
            let domainRange = Range(domainRange, in: percentEncodingRemoved) {
             let email = String(percentEncodingRemoved[emailRange]).removingPercentEncoding
             let domain = String(percentEncodingRemoved[domainRange])
+            print("domain: ")
+            print(domain)
             return (email, domain)
         }
 

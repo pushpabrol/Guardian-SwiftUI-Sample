@@ -92,7 +92,7 @@ struct NotificationView: View {
                         Text("Authorization Request")
                             .font(.headline)
                             .padding(.horizontal)
-                        Text("\(merchantName) is requesting a payment of \(paymentAmount) from your account: \(account)")
+                        Text("\(merchantName) is requesting a payment of \(paymentAmount) from your account: \(account)").fixedSize(horizontal: false, vertical: true)
                             .font(.subheadline)
                             .foregroundColor(.secondary)
                             .padding(.horizontal)
@@ -235,6 +235,7 @@ struct NotificationView: View {
         guard let notification = notificationCenter.authenticationNotification, let enrollment = enrollment else {
             return
         }
+        
         browserLabel = notification.source?.browser?.name ?? "Unknown"
         location = notification.location!
         dateLabel = "\(notification.startedAt.formatted(date: .abbreviated, time: Date.FormatStyle.TimeStyle.standard))"
@@ -242,21 +243,26 @@ struct NotificationView: View {
         self.tenant = enrollment.enrollmentTenantDomain
 
         // This part of the code is custom to get the Authorization details
-        if notification.txlnkid != nil {
-            if let url = URL(string: "https://messagestore.desmaximus.com/api/message/".appending(notification.txlnkid!)) {
+        print("notification txlnkid")
+        print(notification.txlnkid)
+        
+        //if notification.txlnkid != nil {
+        if notification.txlnkid != "" {
+            if let url = URL(string: "https://messagestore.desmaximus.com/api/message/".appending(notification.txlnkid)) {
                 URLSession.shared.dataTask(with: url) { data, response, error in
                     if let data = data {
                         do {
                             let res = try JSONDecoder().decode(AuthorizationDetails.self, from: data)
-                            print(url)
+                            print(res)
                             print(res.account)
                             DispatchQueue.main.async {
                                 self.merchantName = res.creditorName
-                                self.paymentAmount = "\(res.transaction_amount)".appending(" USD")
+                                self.paymentAmount = res.transaction_amount.appending(" USD")
                                 self.account = res.account
-                                self.requiresPINVerification = !(enrollment.enrollmentPIN ?? "").isEmpty
+                                //self.requiresPINVerification = !(enrollment.enrollmentPIN ?? "").isEmpty
                             }
                         } catch let error {
+                            print("ERROR NOTIFICATION txlnkid")
                             print(error)
                         }
                     }
@@ -319,7 +325,7 @@ struct NotificationView_Previews: PreviewProvider {
 struct AuthorizationDetails: Codable {
     let account: String
     let creditorName: String
-    let transaction_amount: Int
+    let transaction_amount: String
     let transaction_id: String
     let type: String
 }

@@ -1,0 +1,6 @@
+framework module Pods_GuardianAppSwiftUI {
+  umbrella header "Pods-GuardianAppSwiftUI-umbrella.h"
+
+  export *
+  module * { export * }
+}

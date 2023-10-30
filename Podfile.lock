@@ -1,0 +1,16 @@
+PODS:
+  - Guardian (1.0.0)
+
+DEPENDENCIES:
+  - Guardian
+
+SPEC REPOS:
+  trunk:
+    - Guardian
+
+SPEC CHECKSUMS:
+  Guardian: 72860abbac74365a50a5b6dc272ae8715df2bee2
+
+PODFILE CHECKSUM: 5451351bbc875c68d3febacc21b1c74c548bac21
+
+COCOAPODS: 1.13.0

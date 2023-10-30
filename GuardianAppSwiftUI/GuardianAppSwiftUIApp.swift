@@ -165,10 +165,15 @@ public class NotificationCenter: NSObject, UNUserNotificationCenterDelegate, Obs
         
         //let content = notification.request.content
         //let identifier = notification.request.identifier
+        print("llego la notification")
+        print(notification)
         let userInfo = notification.request.content.userInfo
+        print("la user info")
         print(userInfo)
 
         if let notification = Guardian.notification(from: userInfo) {
+            print("la notification")
+            print(notification)
             show(notification: notification)
         }
         completionHandler([]) //Avoid displaying iOS UI when app in foreground
@@ -206,6 +211,7 @@ public class NotificationCenter: NSObject, UNUserNotificationCenterDelegate, Obs
     
     
     private func show(notification: Guardian.Notification) {
+        print("is this the notification received from Okta CIC: ")
         print(notification)
 
         authenticationNotification = notification

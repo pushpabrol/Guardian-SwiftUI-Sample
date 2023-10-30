@@ -1,0 +1,6 @@
+framework module Guardian {
+  umbrella header "Guardian-umbrella.h"
+
+  export *
+  module * { export * }
+}
